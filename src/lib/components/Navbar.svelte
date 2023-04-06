@@ -2,6 +2,8 @@
   import logo from "$lib/assets/ezinore-logo-white.png";
   import { page } from "$app/stores";
 
+  import Icon from "@iconify/svelte";
+
   let menuOpen = false;
   let stuffAppear = false;
 
@@ -77,8 +79,9 @@
         setTimeout(() => {
           stuffAppear = true;
         }, 300);
-      }}>Menu</button
-    >
+      }}
+      ><Icon icon="material-symbols:menu" />
+    </button>
 
     <div class="nav-bar" class:open={menuOpen}>
       {#if stuffAppear === true}
@@ -89,7 +92,8 @@
             menuOpen = false;
           }}
         >
-          Close
+        <Icon icon="material-symbols:close" />
+
         </button>
 
         {#if $page.url.pathname !== "/"}
@@ -180,7 +184,6 @@
     font-weight: bold;
     margin-inline: 1em;
     transition: transform 0.05s ease-in;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1em;
   }
 </style>
