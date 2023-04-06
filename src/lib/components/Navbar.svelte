@@ -3,10 +3,12 @@
   import { page } from "$app/stores";
 
   let menuOpen = false;
+  let stuffAppear = false;
 
   function scrollToElement({ target }: { target: any }) {
     const el = document.querySelector(target.getAttribute("href"));
     if (!el) return;
+    stuffAppear = false;
     menuOpen = false;
     el.scrollIntoView({
       behavior: "smooth",
@@ -71,18 +73,19 @@
       class="text-white"
       on:click={() => {
         menuOpen = true;
+
+        setTimeout(() => {
+          stuffAppear = true;
+        }, 300);
       }}>Menu</button
     >
 
-    {#if menuOpen === true}
-      <div
-        class={`h-screen top-0 right-0  items-center absolute bg-white rounded-l-xl my-1 flex flex-col bg-opacity-80 backdrop-blur-xl ease-in-out duration-300 ${
-          menuOpen ? "w-[40%]" : "w-0"
-        }`}
-      >
+    <div class="nav-bar" class:open={menuOpen}>
+      {#if stuffAppear === true}
         <button
           class="my-10"
           on:click={() => {
+            stuffAppear = false;
             menuOpen = false;
           }}
         >
@@ -92,6 +95,7 @@
         {#if $page.url.pathname !== "/"}
           <a
             on:click={() => {
+              stuffAppear = false;
               menuOpen = false;
             }}
             href="/"
@@ -106,6 +110,7 @@
         {/if}
         <a
           on:click={() => {
+            stuffAppear = false;
             menuOpen = false;
           }}
           href="/about"
@@ -113,6 +118,7 @@
         >
         <a
           on:click={() => {
+            stuffAppear = false;
             menuOpen = false;
           }}
           href="/calculate"
@@ -121,6 +127,7 @@
         {#if $page.url.pathname !== "/"}
           <a
             on:click={() => {
+              stuffAppear = false;
               menuOpen = false;
             }}
             href="/contact"
@@ -133,8 +140,8 @@
             on:click|preventDefault={scrollToElement}>Contact Us</a
           >
         {/if}
-      </div>
-    {/if}
+      {/if}
+    </div>
   </div>
 </div>
 
@@ -147,6 +154,22 @@
 
   .nav-element:hover {
     transform: scale(1.1, 1.1);
+  }
+
+  .nav-bar {
+    width: 0px;
+    top: 0;
+    right: 0;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    border-top-left-radius: 0.75rem /* 12px */;
+    border-bottom-left-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px);
   }
 
   .nav-bar.open {
