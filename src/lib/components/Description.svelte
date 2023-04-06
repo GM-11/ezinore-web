@@ -41,7 +41,7 @@
   </script>
   
 
-  <div class='w-full flex flex-col bg-white'>
+  <div class='w-full  flex-col md:flex hidden bg-white'>
     <!-- {desc.map((val) => { -->
       
      {#each desc as val}
@@ -70,4 +70,42 @@
   
   </div>
   
-  
+  <div class="md:hidden flex items-center text-black bg-white my-8 px-0 justify-center ">
+    <div class="flex flex-col  justify-center items-center">
+
+      {#each desc as val}
+      <div >
+        <img
+          src={val.img}
+          id={val.id}
+          class={`rounded-lg w-[80%] mx-5 ease-in duration-100 mt-10 mb-5`}
+          alt=""
+        />
+        <div class="z-20 col-span-3  flex flex-col justify-center items-center sm:items-start">
+          <div class="flex  flex-col justify-center">
+            <h1 class="mx-8 font-semibold text-3xl">{val.heading}</h1>
+            <h1 class="mx-8">{val.description}</h1>
+          </div>
+        </div>
+      </div>
+      {/each}
+      <!-- {desc.map((val) => {
+        return (
+          <div key={val.id}>
+            <Image
+              src={val.img}
+              id={val.id}
+              className={`rounded-lg w-[80%] mx-5 ease-in duration-100 mt-10 mb-5`}
+              alt=""
+            />
+            <div className="z-20 col-span-3  flex flex-col justify-center items-center sm:items-start">
+              <div className="flex  flex-col justify-center">
+                <h1 className="mx-8 font-semibold text-3xl">{val.heading}</h1>
+                <h1 className="mx-8">{val.description}</h1>
+              </div>
+            </div>
+          </div>
+        );
+      })} -->
+    </div>
+  </div>
