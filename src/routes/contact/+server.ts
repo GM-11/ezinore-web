@@ -15,7 +15,7 @@ export async function POST(requestEvent: RequestEvent) {
 
   const mailDetails = {
     from: body.email,
-    to: "ezinorepvtltd@gmail.com",
+    to: "connect@ezinore.com",
     subject: body.email + " has sent a new message",
     text: body.message,
   };
@@ -31,3 +31,40 @@ export async function POST(requestEvent: RequestEvent) {
 
   return json({ message: "completed email function" });
 }
+
+
+// import type { RequestEvent } from "@sveltejs/kit";
+// import { json } from "@sveltejs/kit";
+
+// import { SES } from "aws-sdk";
+
+// export async function POST(requestEvent: RequestEvent) {
+//   const body = await requestEvent.request.json();
+
+//   const ses = new SES({ region: "eu-west-1" });
+//   const params = {
+//     Source: body.email,
+//     Destination: {
+//       ToAddresses: ["mathuyrgopal@gmail.com"],
+//     },
+//     Message: {
+//       Body: {
+//         Text: {
+//           Data: body.message,
+//         },
+//       },
+//       Subject: {
+//         Data: `New message from ${body.email}`,
+//       },
+//     },
+//   };
+
+//   try {
+//     const result = await ses.sendEmail(params).promise();
+//     json(result);
+//   } catch (error) {
+//     json(error);
+//   }
+
+//   return json({ message: "completed email function" });
+// }

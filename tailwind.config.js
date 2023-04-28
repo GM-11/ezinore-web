@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors : {
-        'graybg' : '#0C0F0F'
+        'graybg' : '#0C0F0F',
+        'primary-yellow' : '#F4B931'
       },
     }
   },

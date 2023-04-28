@@ -21,6 +21,8 @@ export async function POST(requestEvent: RequestEvent) {
     currency,
     receipt: uuidv4(),
     payment_capture,
+
+    
   };
   try {
     const response = await razorpay.orders.create(options);
