@@ -19,7 +19,7 @@ export async function POST(requestEvent: RequestEvent) {
   const options = {
     amount: amount * 100,
     currency,
-    receipt: uuidv4(),
+    receipt: Date.now().toString(),
     payment_capture,
 
     
