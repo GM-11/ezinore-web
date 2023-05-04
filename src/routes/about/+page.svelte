@@ -17,7 +17,7 @@
   ];
 </script>
 
-<div class="bg-black py-32 text-white ">
+<div class="bg-black py-32 text-white">
   <div class="  mx-16">
     <h1 class="my-2 text-3xl font-semibold md:text-5xl md:w-[40%]">About us</h1>
 
@@ -33,11 +33,10 @@
   </div>
 
   <div class="  justify-between sm:items-center flex md:flex-row flex-col mx-4">
-
     <div
       class="flex flex-col justify-around md:text-xl text-sm font-thin md:items-center md:px-16 w-full md:leading-10"
     >
-      <h1 class="my-3 ">
+      <h1 class="my-3">
         We are at the forefront of the clean energy revolution. That's why we've
         designed a solution that seamlessly integrates into existing
         infrastructure, making it easy for everyone to make the switch to clean
@@ -65,12 +64,16 @@
 
   <div class="flex w-full p-5 overflow-scroll no-scrollbar">
     {#each team as val}
-     <div class="flex flex-col items-center     mx-5">
-        <img src={val.img} width="300" class="rounded-lg overflow-scroll" alt="" />
+      <div class="flex flex-col items-center mx-5">
+        <img
+          src={val.img}
+          width="300"
+          class="rounded-lg overflow-scroll"
+          alt=""
+        />
         <h1 class="md:text-xl text-sm font-bold">{val.name}</h1>
         <p class="md:text-sm text-xs">{val.position}</p>
-     </div>
+      </div>
     {/each}
-    
   </div>
 </div>
