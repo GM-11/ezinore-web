@@ -1,5 +1,4 @@
 <script>
-  import sow from "$lib/assets/sparko-on-wall.png";
   import gopal from "$lib/assets/team/gopal.png";
   import nirmal from "$lib/assets/team/nirmal.png";
   import ritwij from "$lib/assets/team/ritwij.png";
@@ -34,7 +33,6 @@
   </div>
 
   <div class="  justify-between sm:items-center flex md:flex-row flex-col mx-4">
-    <img src={sow} alt="" class="rounded-2xl sm:h-full md:w-[40%] " />
 
     <div
       class="flex flex-col justify-around md:text-xl text-sm font-thin md:items-center md:px-16 w-full md:leading-10"
