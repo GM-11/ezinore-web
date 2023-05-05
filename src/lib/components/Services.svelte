@@ -1,5 +1,5 @@
 <script>
-  import ServicesModal from "./ServicesModal.svelte";
+  import ServicesModal from "./Modals/ServicesModal.svelte";
   import l1 from "$lib/assets/l1.png";
 </script>
 

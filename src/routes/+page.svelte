@@ -2,6 +2,7 @@
   import Form from "$lib/components/Form.svelte";
   import LandingPage from "$lib/components/LandingPage.svelte";
   import Services from "$lib/components/Services.svelte";
+  import Whyus from "$lib/components/Whyus.svelte";
   // import Description from "$lib/components/Description.svelte";
   // import Joinus from "$lib/components/Joinus.svelte";
 </script>
@@ -11,5 +12,6 @@
 <LandingPage />
 <Form />
 <Services />
+<Whyus/>
 <!-- <Description/> -->
 <!-- <Joinus/> -->

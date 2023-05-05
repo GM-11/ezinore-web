@@ -1,5 +1,6 @@
 <script>
   import commercialImage from "$lib/assets/commercial-icon.png";
+  import residentialImage from "$lib/assets/residential-icon.png";
 </script>
 
 <div>
@@ -29,7 +30,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="col-span-1 flex justify-center flex-col items-center">
-        <img src={commercialImage} alt="" />
+        <img src={residentialImage} alt="" />
         <h2 class="font-semibold text-2xl">Residential</h2>
       </div>
       <div class="col-span-1 flex justify-center flex-col items-center">

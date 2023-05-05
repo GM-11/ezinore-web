@@ -21,7 +21,7 @@
   /**
    * @type {{ val: number; }}
    */
-  import { calcOutput, crossOffOutput } from "../stores/calculation";
+  import { calcOutput, crossOffOutput } from "../../stores/calculation";
   //   calcOutput.subscribe(val => {
   //     output = val
   //   })

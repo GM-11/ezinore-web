@@ -13,7 +13,7 @@
   let areaType = "sqm";
 
   import states from "$lib/data/states";
-  import CalculationModal from "./CalculationModal.svelte";
+  import CalculationModal from "./Modals/CalculationModal.svelte";
   import { calcOutput, displayOutput } from "../stores/calculation";
 
   const categories = [

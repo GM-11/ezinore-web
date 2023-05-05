@@ -2,8 +2,6 @@
   import logo from "$lib/assets/ezinore-logo-coloured.png";
   import { page } from "$app/stores";
 
-  import Icon from "@iconify/svelte";
-
   let menuOpen = false;
   let stuffAppear = false;
 

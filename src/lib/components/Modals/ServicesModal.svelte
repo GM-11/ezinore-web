@@ -1,9 +1,8 @@
-<script>
-  // @ts-nocheck
+<script lang="ts">
 
-  export let content;
-  export let title;
-  export let imgPath;
+  export let content:string;
+  export let title:string;
+  export let imgPath:string;
 </script>
 
 <div class="main">
