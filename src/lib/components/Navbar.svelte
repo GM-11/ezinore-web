@@ -17,7 +17,7 @@
 </script>
 
 <nav
-  class="bg-white hidden text-black items-center absolute md:flex flex-row justify-between w-full p-5"
+  class="bg-white hidden text-black items-center md:flex flex-row justify-between w-full p-5"
 >
   {#if $page.url.pathname !== "/"}
     <a href="/" class="nav-element"><img src={logo} width="100" alt="" /> </a>

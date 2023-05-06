@@ -1,79 +1,71 @@
-<script>
-  import gopal from "$lib/assets/team/gopal.png";
-  import nirmal from "$lib/assets/team/nirmal.png";
-  import ritwij from "$lib/assets/team/ritwij.png";
-  import rohit from "$lib/assets/team/rohit.png";
-
-  const team = [
-    { id: "1", name: "Nirmal Yadav", position: "Founder and CEO", img: nirmal },
-    {
-      id: "2",
-      name: "Ritwij Kashyap",
-      position: "Marketing Head",
-      img: ritwij,
-    },
-    { id: "5", name: "Rohit Gorai", position: "Design Head", img: rohit },
-    { id: "3", name: "Gopal Mathur", position: "Head Developer", img: gopal },
-  ];
+<script lang="ts">
+  import k1 from "$lib/assets/k1.png";
+  import k2 from "$lib/assets/k2.png";
+  import k3 from "$lib/assets/k3.png";
 </script>
 
-<div class="bg-black py-32 text-white">
-  <div class="  mx-16">
-    <h1 class="my-2 text-3xl font-semibold md:text-5xl md:w-[40%]">About us</h1>
+<div
+  class={`bg-[url($lib/assets/header-img-2.png)] h-screen bg-cover bg-bottom `}
+/>
 
-    <h1 class="my-5 text-xl md:text-2xl md:w-[40%]">
-      All-in-one solutions for generating, storing, monitoring, and controlling
-      clean energy.
-    </h1>
+<div class="p-10">
+  <h1>Aim</h1>
+  <p class="aim-para">
+    Our goal is to revolutionise today's power grid system with the help of an
+    all-in-one sustainable solution that seamlessly embeds itself into the
+    existing infrastructure.
+  </p>
 
-    <h1 class="my-16 text-2xl md:text-4xl md:w-[50%]">
-      Our vision is to change the way people think about energy, and to create a
-      world where clean energy is accessible, affordable, and easy to use.
-    </h1>
-  </div>
-
-  <div class="  justify-between sm:items-center flex md:flex-row flex-col mx-4">
-    <div
-      class="flex flex-col justify-around md:text-xl text-sm font-thin md:items-center md:px-16 w-full md:leading-10"
-    >
-      <h1 class="my-3">
-        We are at the forefront of the clean energy revolution. That's why we've
-        designed a solution that seamlessly integrates into existing
-        infrastructure, making it easy for everyone to make the switch to clean
-        energy.
-      </h1>
-      <h1 class="my-3">
-        We ensure proper installation and maintenance of the system. By
-        combining solar energy with smart flow control and a predictive
-        algorithm, we produce sustainable energy which is then smartly
-        distributed into storage and supply. The algorithm controlling
-        distribution takes into account usage patterns, weather forecasts, and
-        expected solar irradiance to smartly adjust battery capacity and energy
-        flow to maximize solar power utilization.
-      </h1>
-      <h1 class="my-3">
-        Our mobile application gives you compconste visibility into your
-        self-powered home. You can monitor your home solar generation, battery
-        power flow, household consumption, and monetary savings in real-time
-        from anywhere.
-      </h1>
+  <div class="flex md:flex-row flex-col justify-evenly">
+    <div class="ans">
+      <img src={k1} alt="" />
+      <p>
+        Sustainable electricity with minimal environmental impact, powered by
+        renewable energy sources.
+      </p>
+    </div>
+    <div class="ans">
+      <img src={k2} alt="" />
+      <p>
+        A future where every building is a net-zero energy building, enabled by
+        renewable energy and smart grid technologies optimized by AI.
+      </p>
+    </div>
+    <div class="ans">
+      <img src={k3} alt="" />
+      <p>
+        An efficient and resilient electricity grid, powered by sustainable
+        energy and fine-tuned to minimize waste and emissions.
+      </p>
     </div>
   </div>
-
-  <h1 class="mx-5 text-3xl mt-10">Our Team</h1>
-
-  <div class="flex w-full p-5 overflow-scroll no-scrollbar">
-    {#each team as val}
-      <div class="flex flex-col items-center mx-5">
-        <img
-          src={val.img}
-          width="300"
-          class="rounded-lg overflow-scroll"
-          alt=""
-        />
-        <h1 class="md:text-xl text-sm font-bold">{val.name}</h1>
-        <p class="md:text-sm text-xs">{val.position}</p>
-      </div>
-    {/each}
-  </div>
 </div>
+
+<style>
+  h1 {
+    color: black;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+
+  .ans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 20em;
+    padding-bottom: 2rem;
+  }
+
+  .aim-para {
+    margin-left: 1rem;
+    margin-right: 20rem;
+    color: #072125;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+</style>
