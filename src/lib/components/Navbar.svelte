@@ -20,10 +20,10 @@
   class="bg-white hidden text-black items-center md:flex flex-row  justify-between w-full p-5"
 >
   {#if $page.url.pathname !== "/"}
-    <a href="/" class="nav-element"><img src={logo} width="130" alt="" /> </a>
+    <a href="/" class="nav-element"><img src={logo} width="150" alt="" /> </a>
   {:else}
     <a href="#home" on:click={scrollToElement}>
-      <img src={logo} width="130" alt="" class="nav-element cursor-pointer" />
+      <img src={logo} width="150" alt="" class="nav-element cursor-pointer" />
     </a>
   {/if}
 

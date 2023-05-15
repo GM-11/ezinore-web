@@ -5,10 +5,9 @@
 
 <div>
   <div
-    class={`bg-[url($lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center `}
+    class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center `}
   >
 
-  <img src="$lib/assets/header-img-1.png" alt="" style="width:100%">
     <div
       class=" text-center flex flex-col justify-between items-center text-xl md:text-2xl w-full md:w-[60%] p-5 text-white"
     >

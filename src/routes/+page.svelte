@@ -3,8 +3,6 @@
   import LandingPage from "$lib/components/LandingPage.svelte";
   import Services from "$lib/components/Services.svelte";
   import Whyus from "$lib/components/Whyus.svelte";
-  // import Description from "$lib/components/Description.svelte";
-  // import Joinus from "$lib/components/Joinus.svelte";
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,5 +11,3 @@
 <Form />
 <Services />
 <Whyus/>
-<!-- <Description/> -->
-<!-- <Joinus/> -->

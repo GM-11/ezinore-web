@@ -150,6 +150,7 @@
     overflow-x: scroll;
     flex-direction: row;
     width: 100%;
+    margin: 3rem 0;
   }
   .slider div {
     width: calc(50% - 10px);
@@ -172,6 +173,7 @@
     text-align: center;
     width: 20em;
     padding-bottom: 2rem;
+    margin: 3rem  ;
   }
 
   .answers {
@@ -179,6 +181,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   p {
     color: #072125;
