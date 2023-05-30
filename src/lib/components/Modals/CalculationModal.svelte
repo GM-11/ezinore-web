@@ -27,7 +27,7 @@
   //   })
 </script>
 
-<div class="modal p-10">
+<div id="calc-modal" class="modal p-10">
   <div class="flex flex-row w-full justify-between mb-10">
     <h2>Recommended Options for you</h2>
     <button on:click={crossOffOutput}><Icon icon="iconoir:cancel" /></button>

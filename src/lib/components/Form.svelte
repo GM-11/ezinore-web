@@ -1,6 +1,8 @@
 <script>
   // @ts-nocheck
 
+  import { onMount } from "svelte";
+
   let selectedOption = 0;
   let electricityCost = 4.0;
   let state = "Select State";
@@ -15,6 +17,11 @@
   import states from "$lib/data/states";
   import CalculationModal from "./Modals/CalculationModal.svelte";
   import { calcOutput, displayOutput } from "../stores/calculation";
+
+  onMount(() => {
+    const modal = document.getElementById("calc-modal");
+    modal.scrollIntoView({ behavior: "smooth" });
+  });
 
   const categories = [
     "Residential",
@@ -58,12 +65,12 @@
 <div class=" flex-col flex items-center">
   <div class=" flex flex-col md:flex-row justify-between w-full p-10">
     <div class=" flex flex-col items-start h-full md:w-[40vw]">
-      <h1>
-        Calculate your investments with us
-      </h1>
+      <h1>Calculate your investments with us</h1>
 
       <p class="mb-5">The Sparko comes in three configurations:</p>
-      <ul class="list-disc list-inside flex flex-row md:flex-col justify-between w-full">
+      <ul
+        class="list-disc list-inside flex flex-row md:flex-col justify-between w-full"
+      >
         <li>3kW</li>
         <li>5kW</li>
         <li>10kW</li>
@@ -171,8 +178,12 @@
   </div>
 
   {#if $calcOutput.val === 1}
-    <CalculationModal />
+      <CalculationModal />
   {/if}
+
+  
+
+
 </div>
 
 <style>
@@ -249,14 +260,14 @@
     .card {
       width: 90vw;
       margin: 0.5rem;
-      translate: -2rem 0 
+      translate: -2rem 0;
     }
 
     h2 {
       font-size: small;
     }
 
-    h1{
+    h1 {
       font-size: 2rem;
     }
   }

@@ -24,22 +24,7 @@
       </a>
     </div>
   </div>
-  <div class="p-10">
-    <h1>
-      Who are we selling to?
-    </h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div class="col-span-1 flex justify-center flex-col items-center">
-        <img src={residentialImage} alt="" />
-        <h2 class="font-semibold text-2xl">Residential</h2>
-      </div>
-      <div class="col-span-1 flex justify-center flex-col items-center">
-        <img src={commercialImage} alt="" />
-        <h2 class="font-semibold text-2xl">Commerical</h2>
-      </div>
-    </div>
-  </div>
+  
 </div>
 
 <style>

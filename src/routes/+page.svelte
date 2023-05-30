@@ -2,6 +2,7 @@
   import Form from "$lib/components/Form.svelte";
   import LandingPage from "$lib/components/LandingPage.svelte";
   import Services from "$lib/components/Services.svelte";
+  import Testimonials from "$lib/components/Testimonials.svelte";
   import Whyus from "$lib/components/Whyus.svelte";
 </script>
 
@@ -9,5 +10,6 @@
 
 <LandingPage />
 <Form />
-<Services />
 <Whyus/>
+<Services />
+<Testimonials/>
