@@ -1,13 +1,10 @@
 <script lang="ts">
-  import ans1 from "$lib/assets/ans1.png";
-  import ans2 from "$lib/assets/ans2.png";
-  import ans3 from "$lib/assets/ans3.png";
-  import ans4 from "$lib/assets/ans4.png";
-  import ans5 from "$lib/assets/ans5.png";
-  import ans6 from "$lib/assets/ans6.png";
-
-
-    
+  import ans1 from "$lib/assets/ans/ans1.png";
+  import ans2 from "$lib/assets/ans/ans2.png";
+  import ans3 from "$lib/assets/ans/ans3.png";
+  import ans4 from "$lib/assets/ans/ans4.png";
+  import ans5 from "$lib/assets/ans/ans5.png";
+  import ans6 from "$lib/assets/ans/ans6.png";
 </script>
 
 <div class="main h-full bg-white p-10">
@@ -62,20 +59,15 @@
       </p>
     </div>
   </div>
-
-  <div class="mx-20 bg-gray-400 h-[0.05em]" />
-
-  
 </div>
 
 <style>
-  h2{
+  h2 {
     font-weight: 500;
     margin: 1rem 1rem;
     font-size: 1rem;
-
   }
- 
+
   .ans {
     display: flex;
     flex-direction: column;
@@ -87,7 +79,7 @@
   .answers {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(100px, auto);
   }
   p {
     color: #072125;

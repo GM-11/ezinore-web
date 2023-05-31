@@ -1,10 +1,10 @@
 <script>
   import ServicesModal from "./Modals/ServicesModal.svelte";
-  import l1 from "$lib/assets/l1.png";
-  import l2 from "$lib/assets/l2.png";
-  import l3 from "$lib/assets/l3.png";
-  import l4 from "$lib/assets/l4.png";
-  import l5 from "$lib/assets/l5.png";
+  import l1 from "$lib/assets/services/l1.png";
+  import l2 from "$lib/assets/services/l2.png";
+  import l3 from "$lib/assets/services/l3.png";
+  import l4 from "$lib/assets/services/l4.png";
+  import l5 from "$lib/assets/services/l5.png";
 
   import { onMount } from "svelte";
 
