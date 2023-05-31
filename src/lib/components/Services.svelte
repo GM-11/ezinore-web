@@ -11,12 +11,11 @@
   onMount(() => {
     const body = document.getElementById("body");
 
-    body?.addEventListener('scroll' , () => {
-      if(body.scrollTop > 50){
-        console.log("hello")
+    body?.addEventListener("scroll", () => {
+      if (body.scrollTop > 50) {
+        console.log("hello");
       }
-    })
-    
+    });
   });
 </script>
 
@@ -76,8 +75,6 @@
     overflow-y: hidden;
 
     width: 100%;
-  }
-  .main {
   }
 
   h1 {
