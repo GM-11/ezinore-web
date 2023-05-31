@@ -18,10 +18,10 @@
   import CalculationModal from "./Modals/CalculationModal.svelte";
   import { calcOutput, displayOutput } from "../stores/calculation";
 
-  onMount(() => {
-    const modal = document.getElementById("calc-modal");
-    modal.scrollIntoView({ behavior: "smooth" });
-  });
+  // onMount(() => {
+  //   const modal = document.getElementById("calc-modal");
+  //   modal.scrollIntoView({ behavior: "smooth" });
+  // });
 
   const categories = [
     "Residential",
@@ -90,7 +90,7 @@
           placeholder="Area"
           class="input-box"
         />
-        <form>
+        <form id="form">
           <label
             >Sq.m
             <input
