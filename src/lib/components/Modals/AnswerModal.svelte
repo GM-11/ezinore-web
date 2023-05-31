@@ -2,15 +2,39 @@
   export let title: string;
   export let imgPath: string;
   export let content: string;
+  export let index: number;
 </script>
 
-<div class="flex flex-col min-w-[10em] md:min-w-[25em] mx-20 my-4">
+<!-- <div class="flex flex-row min-w-[10em] md:min-w-[50em] mx-20 my-4"> -->
+<div id={`item-${index}`} class="container">
   <img src={imgPath} alt="" />
-  <h1>{title}</h1>
-  <p>{content}</p>
+  <div class="flex flex-col mx-5">
+    <h1>{title}</h1>
+    <p>{content}</p>
+  </div>
 </div>
 
 <style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 60em;
+    margin-inline: 4rem;
+    margin-block: 1rem;
+  }
+
+  @media screen and (max-width: 786px) {
+    .container {
+      flex-direction: column;
+      min-width: 30em;
+    }
+    h1{
+      font-size: 1rem;
+    }
+  }
+
   p {
     color: #072125;
   }
@@ -28,7 +52,7 @@
 
   @media screen and (max-width: 786px) {
     p {
-        font-size: 0.75em;
+      font-size: 0.75em;
     }
   }
 </style>

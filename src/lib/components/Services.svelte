@@ -1,9 +1,26 @@
 <script>
   import ServicesModal from "./Modals/ServicesModal.svelte";
   import l1 from "$lib/assets/l1.png";
+  import l2 from "$lib/assets/l2.png";
+  import l3 from "$lib/assets/l3.png";
+  import l4 from "$lib/assets/l4.png";
+  import l5 from "$lib/assets/l5.png";
+
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const body = document.getElementById("body");
+
+    body?.addEventListener('scroll' , () => {
+      if(body.scrollTop > 50){
+        console.log("hello")
+      }
+    })
+    
+  });
 </script>
 
-<div class="main h-full py-10">
+<div id="body">
   <h1 class="px-10">Our Services</h1>
   <div class="scrollbar-hide px-10">
     <ServicesModal
@@ -13,21 +30,25 @@
     />
 
     <ServicesModal
-      content={"We visit the site of installation and inspect the infrastructure to estimate the system configuration that would be suitable for installation."}
+      content={"A 3D model of SPARKO and associated solar panel system is designed."}
       title={"3D Modelling"}
-      imgPath={l1}
+      imgPath={l2}
     />
 
     <ServicesModal
-      content={"We visit the site of installation and inspect the infrastructure to estimate the system configuration that would be suitable for installation."}
-      title={"Inspection"}
-      imgPath={l1}
+      content={"Our technicians visit the site and set up the complete solar solution consisting of solar panels and the SPARKO."}
+      title={"Installation"}
+      imgPath={l3}
     />
-
     <ServicesModal
-      content={"We visit the site of installation and inspect the infrastructure to estimate the system configuration that would be suitable for installation."}
-      title={"Inspection"}
-      imgPath={l1}
+      content={"Through the SPARKO companion app, you get a real-time view of the solar generation and battery status. The flow of energy can also be manually controlled through the app"}
+      title={"Digital Monitoring and Energy flow control"}
+      imgPath={l4}
+    />
+    <ServicesModal
+      content={"Cleaning of solar panels along with maintenance and upkeep of SPARKO would be provided on a subscription basis at a minimal cost."}
+      title={"Maintainence and After sales services"}
+      imgPath={l5}
     />
   </div>
 </div>
@@ -35,6 +56,13 @@
 <style>
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  #body {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    background-color: #072125;
+    padding-block: 2.5rem;
   }
 
   /* For IE, Edge and Firefox */
@@ -50,7 +78,6 @@
     width: 100%;
   }
   .main {
-    background-color: #072125;
   }
 
   h1 {
