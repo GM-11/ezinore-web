@@ -1,8 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import residentialImage from "$lib/assets/residential-icon.png";
-  import commercialImage from "$lib/assets/commercial-icon.png";
 
   import x1 from "$lib/assets/x1.png";
   import AnswerModal from "./Modals/AnswerModal.svelte";
@@ -79,25 +77,6 @@
   ];
 </script>
 
-<div id="sellingto">
-  <div>
-    <h1>Who are we selling to?</h1>
-    <h2>
-      We are catering to both the sectors and provide customized solutions to
-      everyone.
-    </h2>
-  </div>
-  <div class="flex flex-row">
-    <div class="flex flex-col items-center justify-center">
-      <img src={residentialImage} alt="" />
-      <h2>Residential</h2>
-    </div>
-    <div class="flex flex-col items-center justify-center">
-      <img src={commercialImage} alt="" />
-      <h2>Commercial</h2>
-    </div>
-  </div>
-</div>
 
 <div id="slider-root">
   <div class="flex flex-row justify-between">
@@ -129,11 +108,7 @@
 </div>
 
 <style>
-  h2 {
-    font-style: normal;
-    font-weight: 500;
-    margin-top: 1.5rem;
-  }
+  
 
   .handleScroll {
     display: flex;
@@ -185,22 +160,5 @@
     line-height: 54px;
   }
 
-  #sellingto {
-    align-items: center;
-    background-color: white;
-    color: black;
-    border-radius: 24px;
-    padding: 3rem;
-    margin: 2 rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: rgb(240, 240, 240);
-  }
 
-  @media (max-width: 768px) {
-    #sellingto {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 </style>
