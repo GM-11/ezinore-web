@@ -58,7 +58,10 @@
     <a href="https://twitter.com/ezinore" target="_blank">
       <img src={twitter} width="30" alt="" />
     </a>
-    <a href="https://www.linkedin.com/company/ezinore" target="_blank">
+    <a
+      href="https://www.linkedin.com/company/ezinore-private-limited/?originalSubdomain=in"
+      target="_blank"
+    >
       <img src={linkedin} width="30" alt="" />
     </a>
     <h2>Follow us:</h2>
