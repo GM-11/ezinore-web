@@ -10,6 +10,7 @@
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
+  import Testimonials from "$lib/components/Testimonials.svelte";
 
   let selected: number = 0;
 
@@ -107,27 +108,44 @@
     </div>
   </div>
 
-  <ul class="slider">
+  <ul class="slider h-full">
     {#each team as member}
-      <li id={`${member.id}`} class=" min-w-[20rem] element">
-        <img
+      <li
+        id={`${member.id}`}
+        class=" element"
+        style={`background-image: url('${member.img}'); background-size: cover; background-position: center;`}
+      >
+        <!-- <img
           class={`  transform transition-all duration-500 ease-in-out ${
             selected == team.indexOf(member) ? "scale-105" : "scale-100"
           }`}
           src={member.img}
           alt=""
-        />
-
-        <h3>{member.name}</h3>
-        <h4>{member.position}</h4>
+        /> -->
+        <div class=" w-full p-3 bg-white">
+          <h3>{member.name}</h3>
+          <h4>{member.position}</h4>
+        </div>
       </li>
     {/each}
   </ul>
 </div>
 
+<Testimonials/>
+
 <style>
   li {
     height: 30rem;
+    min-width: 20rem;
+
+    /* padding: 1rem; */
+    margin: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: transform 0.3s ease;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 0.3s;
   }
   #button {
     display: flex;
@@ -150,7 +168,14 @@
   }
 
   .handleScroll {
-    width: 5rem;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border-radius: 150px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    margin: 0 0.5rem;
+    transition: 0.3s;
+    width: 3rem;
   }
 
   #leftbox {
@@ -189,20 +214,6 @@
     line-height: 54px;
   }
 
-  @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-  }
-
-  li > img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
   h4 {
     font-style: normal;
     font-weight: 700;
@@ -219,32 +230,39 @@
     line-height: 32px;
   }
 
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
   p {
     text-align: start;
     color: #072125cc;
   }
 
-  .element {
-    min-width: 1rem;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    /* border-radius-top: 40px; */
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    transition: 0.3s;
-    height: 20rem;
-  }
-
   .slider {
-    background-color: blue;
-    align-items: center;
+    scrollbar-width: 0em;
+    scrollbar-color: transparent transparent;
+    align-items: start;
     display: flex;
-    height: 30rem;
     flex-direction: row;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-y: visible;
+    height: 35rem;
+  }
+
+  .slider::-webkit-scrollbar {
+    width: 0em;
+  }
+
+  .slider::-webkit-scrollbar-thumb {
+    background-color: transparent;
   }
 
   .ans {
