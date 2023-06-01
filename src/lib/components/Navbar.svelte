@@ -17,7 +17,7 @@
 </script>
 
 <nav
-  class="bg-white hidden z-20 text-black items-center md:flex flex-row absolute justify-between w-full p-5"
+  class=" hidden z-20 text-black items-center md:flex flex-row absolute justify-between w-full p-5"
 >
   {#if $page.url.pathname !== "/"}
     <a href="/" class="nav-element"><img src={logo} width="150" alt="" /> </a>
@@ -40,7 +40,7 @@
     <a href="/about" class="nav-element">About</a>
     <a href="/product" class="nav-element">Product</a>
     <!-- {#if $page.url.pathname !== "/"} -->
-      <a href="/contact" class="contact">Contact Us</a>
+    <a href="/contact" class="contact">Contact Us</a>
     <!-- {:else}
       <a
         href="#joinus"
@@ -50,7 +50,6 @@
     {/if} -->
   </div>
 </nav>
-
 
 <style>
   .nav-element {
@@ -62,6 +61,15 @@
 
   .nav-element:hover {
     transform: scale(1.1, 1.1);
+  }
+
+  nav {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.97),
+        rgba(255, 255, 255, 0.97)
+      ),
+      #072125;
   }
 
   /* .nav-bar {
@@ -99,6 +107,6 @@
     text-align: center;
     justify-content: center;
     display: flex;
-    background-color: #F4B931;;
+    background-color: #f4b931;
   }
 </style>
