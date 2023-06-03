@@ -50,7 +50,7 @@
       style="border:0; width: 100%; height: 290px;"
       allowfullscreen
     />
-    <div class="flex flex-col justify-evenly p-5">
+    <div class="flex flex-col justify-evenly p-5 ">
       <div>
         <h2>Contact Information</h2>
 

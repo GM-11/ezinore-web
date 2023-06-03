@@ -32,7 +32,6 @@
     element!.scrollIntoView({
       behavior: "smooth",
       block: "center",
-      inline: "start",
     });
   }
 
@@ -45,7 +44,7 @@
   ];
 </script>
 
-<div class="h-screen grid grid-cols-2">
+<div class=" grid grid-cols-2">
   <div id="leftbox">
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
     <h5>
@@ -60,7 +59,7 @@
   />
 </div>
 <div class="py-10 px-14">
-  <h2 class="">Aim</h2>
+  <h2>Aim</h2>
   <p class="aim-para">
     Our goal is to revolutionise today's power grid system with the help of an
     all-in-one sustainable solution that seamlessly embeds itself into the
@@ -94,7 +93,7 @@
   <div class="flex flex-row justify-between">
     <h2>Team</h2>
 
-    <div>
+    <div class="md:flex hidden">
       <button class="text-2xl" disabled={selected == 0} on:click={handlePrev}>
         <img class="handleScroll" alt="" src={leftArrow} />
       </button>
@@ -115,13 +114,6 @@
         class=" element"
         style={`background-image: url('${member.img}'); background-size: cover; background-position: center;`}
       >
-        <!-- <img
-          class={`  transform transition-all duration-500 ease-in-out ${
-            selected == team.indexOf(member) ? "scale-105" : "scale-100"
-          }`}
-          src={member.img}
-          alt=""
-        /> -->
         <div class=" w-full p-3 bg-white">
           <h3>{member.name}</h3>
           <h4>{member.position}</h4>
@@ -131,14 +123,12 @@
   </ul>
 </div>
 
-<Testimonials/>
+<Testimonials />
 
 <style>
   li {
     height: 30rem;
     min-width: 20rem;
-
-    /* padding: 1rem; */
     margin: 1rem;
     display: flex;
     flex-direction: column-reverse;
@@ -193,8 +183,7 @@
   h2 {
     font-style: normal;
     font-weight: 600;
-    font-size: 40px;
-    line-height: 72px;
+    font-size: 2.5rem;
   }
   h5 {
     font-style: normal;
@@ -236,19 +225,39 @@
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .aim-para {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .ans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20em;
+    padding-bottom: 2rem;
+  }
+
+    p{
+      text-align: center;
+    }
+    img{
+      width: 30%;
+      margin: 1rem;
     }
   }
 
   p {
-    text-align: start;
+    text-align: flex-start;
     color: #072125cc;
   }
 
   .slider {
     scrollbar-width: 0em;
     scrollbar-color: transparent transparent;
-    align-items: start;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -279,7 +288,7 @@
     color: #072125;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 </style>

@@ -1,4 +1,4 @@
-<div class="h-screen grid grid-cols-2">
+<div class=" hidden md:grid grid-cols-2">
   <div id="leftbox">
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
     <h2>
@@ -11,6 +11,14 @@
   <div
     class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center z-0`}
   />
+</div>
+
+<div
+  class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
+>
+<a href="/about" id="button"> Learn More </a>
+<h2>
+  We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy.</h2>
 </div>
 
 <style>
@@ -62,16 +70,23 @@
     font-size: 2.75rem;
     color: white;
     width: 50%;
-    line-height: 54px;
   }
 
   @media screen and (max-width: 768px) {
     h1 {
       font-size: 1.5rem;
+      text-align: center;
+      width: 90%;
+      margin:0.2rem;
+
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+      width: 90%;
+      margin: 0.2rem;
+      line-height: 2rem;
     }
   }
 </style>

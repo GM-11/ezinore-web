@@ -11,6 +11,7 @@
     <p>{content}</p>
   </div>
   <img src={imgPath} alt="" style="width:60%" class="md:flex hidden" />
+  <!-- <img src={imgPath} alt="" style="width:50%" class="flex md:hidden absolute" /> -->
 </div>
 
 <style>
@@ -54,7 +55,12 @@
 
   @media screen and (max-width: 786px) {
     h1 {
-      font-size: 2em;
+      font-size: 1.5em;
+
+    }
+
+    p{
+      width: 100%;
     }
 
     .main {
@@ -67,11 +73,16 @@
       margin-right: 1rem;
     }
 
+    img{
+      translate: 3em -10em;
+    }
+
     .content{
       text-align: center;
       justify-content: center;
       align-items: center;
       display: flex;
+      width: 100%;
     }
 
   }

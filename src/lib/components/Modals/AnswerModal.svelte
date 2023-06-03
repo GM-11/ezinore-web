@@ -28,10 +28,17 @@
   @media screen and (max-width: 786px) {
     .container {
       flex-direction: column;
-      min-width: 30em;
+      min-width: 20em;
     }
-    h1{
+    h1 {
       font-size: 1rem;
+    }
+
+    img {
+      width: 100%;
+    }
+    p {
+      font-size: 0.75em;
     }
   }
 
@@ -44,15 +51,5 @@
     font-size: 2rem;
     margin-top: 1rem;
     font-weight: 700;
-  }
-
-  /* img{
-    width: fit-content;
-  } */
-
-  @media screen and (max-width: 786px) {
-    p {
-      font-size: 0.75em;
-    }
   }
 </style>

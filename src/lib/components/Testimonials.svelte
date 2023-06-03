@@ -80,8 +80,8 @@
 
 <div id="slider-root">
   <div class="flex flex-row justify-between">
-    <h1>Testimonials</h1>
-    <div class="flex flex-row justify-end w-[30%]">
+    <h1 class="hidden md:flex">Testimonials</h1>
+    <div class="hidden md:flex flex-row justify-end w-[30%]">
       <button on:click={handleScrollLeft}>
         <img class="handleScroll" src={leftArrow} alt="" />
       </button>
@@ -158,6 +158,14 @@
     font-weight: 800;
     font-size: 2.75rem;
     line-height: 54px;
+  }
+
+  @media (max-width: 768px) {
+
+    .slider div {
+      width: calc(100% - 10px);
+      margin-inline: 1rem;
+    }
   }
 
 

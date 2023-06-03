@@ -88,7 +88,8 @@
 
   @media screen and (max-width: 768px) {
     h1 {
-      font-size: 2em;
+      font-size: 1.5em;
+      text-align: center;
     }
   }
 </style>

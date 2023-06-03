@@ -21,9 +21,9 @@
   }
 </script>
 
-<nav class="flex flex-col">
+<nav class="md:flex flex-col hidden">
   <div
-    class=" hidden z-20 text-black items-center md:flex flex-row justify-between w-full p-5"
+    class=" z-20 text-black items-center flex flex-row justify-between w-full p-5"
   >
     {#if $page.url.pathname !== "/"}
       <a href="/" class="nav-element"><img src={logo} width="200" alt="" /> </a>
@@ -37,11 +37,7 @@
       {#if $page.url.pathname !== "/"}
         <a href="/" class="nav-element">Home</a>
       {:else}
-        <a
-          href="#home"
-          class="nav-element"
-          on:click|preventDefault={scrollToElement}>Home</a
-        >
+        <a href="#home" class="nav-element">Home</a>
       {/if}
       <a href="/about" class="nav-element">About</a>
       <a href="/product" class="nav-element">Product</a>
@@ -65,6 +61,51 @@
       <img src={linkedin} width="30" alt="" />
     </a>
     <h2>Follow us:</h2>
+  </div>
+  <hr />
+  <h3>@ Ezinore 2022. All Right Reserved</h3>
+</nav>
+
+<nav class="md:hidden flex flex-col absolute">
+  <div class="flex flex-row justify-between">
+    {#if $page.url.pathname !== "/"}
+      <a href="/" class="nav-element"><img src={logo} width="200" alt="" /> </a>
+    {:else}
+      <a href="#home" on:click={scrollToElement}>
+        <img src={logo} width="200" alt="" class="nav-element cursor-pointer" />
+      </a>
+    {/if}
+
+    <a href="/contact" class="contact">Contact Us</a>
+  </div>
+
+  <div class="flex flex-row justify-between p-5">
+    {#if $page.url.pathname !== "/"}
+      <a href="/" class="nav-element">Home</a>
+    {:else}
+      <a href="#home" class="nav-element">Home</a>
+    {/if}
+    <a href="/about" class="nav-element">About</a>
+    <a href="/product" class="nav-element">Product</a>
+  </div>
+
+  <div class="flex flex-row justify-between p-5">
+    <h2>Follow us:</h2>
+    <a href="https://www.instagram.com/ezinore/" target="_blank">
+      <img src={instagram} width="30" alt="" />
+    </a>
+    <a href="https://www.facebook.com/ezinore" target="_blank">
+      <img src={facebook} width="30" alt="" />
+    </a>
+    <a href="https://twitter.com/ezinore" target="_blank">
+      <img src={twitter} width="30" alt="" />
+    </a>
+    <a
+      href="https://www.linkedin.com/company/ezinore-private-limited/?originalSubdomain=in"
+      target="_blank"
+    >
+      <img src={linkedin} width="30" alt="" />
+    </a>
   </div>
   <hr />
   <h3>@ Ezinore 2022. All Right Reserved</h3>
@@ -117,30 +158,6 @@
       #072125;
   }
 
-  /* .nav-bar {
-      width: 0px;
-      top: 0;
-      right: 0;
-      transition: width 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      position: relative;
-      height: 100vh;
-    } */
-
-  /* .nav-bar.open {
-      width: 40%;
-    }
-  
-    .nav-element-bar {
-      font-weight: bold;
-      margin-inline: 1em;
-      transition: transform 0.05s ease-in;
-      margin-top: 1em;
-    } */
-
   .contact {
     margin-inline: 2rem;
     border-radius: 30px;
@@ -153,5 +170,19 @@
     justify-content: center;
     display: flex;
     background-color: #f4b931;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact {
+      border-radius: 30px;
+      color: black;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background-color: #f4b931;
+      width: 50%;
+    }
   }
 </style>

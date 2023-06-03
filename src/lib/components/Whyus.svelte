@@ -63,9 +63,9 @@
 
 <style>
   h2 {
-    font-weight: 500;
+    font-weight: 650;
     margin: 1rem 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .ans {
@@ -97,12 +97,19 @@
     width: fit-content;
   }
 
-  @media screen and (max-width: 786px) {
+  @media screen and  (max-width: 768px) {
     .answers {
+      display: flex;
       flex-direction: column;
     }
-    h1 {
-      font-size: 2em;
+
+    h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    h2{
+      font-size: 1.2rem;
     }
   }
 </style>

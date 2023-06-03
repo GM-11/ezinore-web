@@ -122,7 +122,7 @@
           bind:value={areaPercentage}
         />
       </div>
-      <div class="flex flex-row w-full">
+      <div class="md:flex flex-row w-full hidden">
         <form class="select-form">
           <h2>Select your state</h2>
           <select bind:value={state}>
@@ -144,7 +144,8 @@
           </select>
         </form>
       </div>
-      <div class="flex flex-row w-full">
+
+      <div class="md:flex flex-row w-full hidden">
         <form class="select-form">
           <h2>Select your budget: {budget} Rupees</h2>
           <input
@@ -168,6 +169,8 @@
           />
         </form>
       </div>
+
+
       <button
         on:click={calculate}
         class="bg-primary-yellow text-black hover:text-whiteF mt-5 px-7 py-4 rounded-full hover:text-white hover:bg-black ease-in duration-100 text-sm"
@@ -219,7 +222,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 100%;    
     padding: 0.5rem;
   }
 
@@ -263,12 +266,22 @@
       translate: -2rem 0;
     }
 
+    input{
+      width: 50%;
+    }
+
     h2 {
       font-size: small;
     }
 
     h1 {
       font-size: 2rem;
+      text-align: center;
+    }
+
+    #form{
+      display: flex;
+      flex-direction: row;
     }
   }
 </style>

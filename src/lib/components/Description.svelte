@@ -4,7 +4,13 @@
 
 <div id="main">
   <div class="col-span-1 flex justify-center items-center">
-    <img width="400" src={product} alt="" />
+    <div class="hidden md:flex">
+      <img width="400" src={product} alt="" />
+    </div>
+
+    <div class="flex md:hidden">
+      <img width="200" src={product} alt="" style="margin:1rem;" />
+    </div>
   </div>
   <div class="col-span-1 content">
     <h1>What is the solution?</h1>
@@ -31,9 +37,9 @@
   p {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.7rem;
-    color: #072125cc;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    color: #072125;
     letter-spacing: -0.035em;
   }
   .content {

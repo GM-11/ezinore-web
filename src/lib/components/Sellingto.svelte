@@ -6,7 +6,7 @@
 <div id="sellingto">
   <div>
     <h1>Who are we selling to?</h1>
-    <h2>
+    <h2 class="md:flex hidden">
       We are catering to both the sectors and provide customized solutions to
       everyone.
     </h2>
@@ -28,7 +28,6 @@
     text-align: left;
     font-weight: 800;
     font-size: 2.75rem;
-    line-height: 54px;
   }
   img{
     width: 50%;
@@ -57,5 +56,22 @@
       display: flex;
       flex-direction: column;
     }
+
+    h1{
+      font-size: 1.3rem;
+      text-align: center;
+    }
+
+    h2{
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    img{
+      widows: 130%;
+      min-width: 130%;
+      margin-inline: 1rem;
+    }
+
   }
 </style>
