@@ -3,7 +3,7 @@
   let email = "";
 </script>
 
-<div class="h-screen p-20 grid grid-cols-1 md:grid-cols-2 main gap-10">
+<div class="h-full p-20 grid grid-cols-1 md:grid-cols-2 main gap-10">
   <div class="span-cols-1 w-[100%] flex flex-col mt-10">
     <h1>How can we help you?</h1>
     <input type="text" bind:value={email} placeholder="Email" />
