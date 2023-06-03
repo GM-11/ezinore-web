@@ -69,7 +69,7 @@ export async function POST(requestEvent: RequestEvent) {
   const outputSavingMonthly =
     (outputElectricityAnnual / 12) * body.electricityCost;
 
-  const subsidyForHeading = getSubsidyForHeading(plantSize, body.customerType);
+  // const subsidyForHeading = getSubsidyForHeading(plantSize, body.customerType);
 
   const outputSubsidy = getProjectSubsidizedAmount(
     plantSize,
@@ -78,11 +78,10 @@ export async function POST(requestEvent: RequestEvent) {
   );
   const outputSavingLifetime = outputSavingAnnual * 25;
 
-  const subsidyAmount = Math.round(
-    Number(outputWithoutSubsidy) - Number(outputSubsidy)
-  );
+  // const subsidyAmount = Math.round(
+  //   Number(outputWithoutSubsidy) - Number(outputSubsidy)
+  // );
 
-  console.log(subsidyForHeading, subsidyAmount);
 
   return json({
     sate: body.state,
@@ -192,21 +191,21 @@ function getPlantSizeBudget(budget: number, category: string): number {
   return largest;
 }
 
-function getSubsidyForHeading(plantSize: number, customerType: string): string {
-  let subsidy = "";
+// function getSubsidyForHeading(plantSize: number, customerType: string): string {
+//   let subsidy = "";
 
-  if (customerType === "Residential") {
-    if (plantSize <= 3) {
-      subsidy = "40%";
-    } else {
-      subsidy = "40% upto 3kW & 20% above 3kW upto 10kW";
-    }
-  } else {
-    subsidy = "0";
-  }
+//   if (customerType === "Residential") {
+//     if (plantSize <= 3) {
+//       subsidy = "40%";
+//     } else {
+//       subsidy = "40% upto 3kW & 20% above 3kW upto 10kW";
+//     }
+//   } else {
+//     subsidy = "0";
+//   }
 
-  return subsidy;
-}
+//   return subsidy;
+// }
 
 function getProjectSubsidizedAmount(
   plantSize: number,

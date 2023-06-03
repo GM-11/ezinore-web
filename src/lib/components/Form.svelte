@@ -52,13 +52,13 @@
 
     if (res.status === 204) {
       output = { message: res.body };
-      console.table(output);
     } else {
       var x = await res.json();
       output = x;
     }
 
     displayOutput(output);
+
   }
 </script>
 
@@ -114,7 +114,7 @@
       <h2>Percentage area available: {areaPercentage}%</h2>
       <div class="options">
         <input
-          type="range"
+          type="number"
           class="range-input"
           min={0}
           max={100}
@@ -122,7 +122,7 @@
           bind:value={areaPercentage}
         />
       </div>
-      <div class="md:flex flex-row w-full hidden">
+      <div class="md:flex flex-row w-full">
         <form class="select-form">
           <h2>Select your state</h2>
           <select bind:value={state}>
@@ -145,12 +145,12 @@
         </form>
       </div>
 
-      <div class="md:flex flex-row w-full hidden">
+      <div class="md:flex flex-row w-full">
         <form class="select-form">
           <h2>Select your budget: {budget} Rupees</h2>
           <input
-            type="range"
-            class="range-input mr-2"
+            type="number"
+            class="range-input md:mr-2"
             min={100000}
             max={10000000}
             step={50000}
@@ -160,8 +160,8 @@
         <form class="select-form">
           <h2>Average electricity cost: {electricityCost}Rs/kW</h2>
           <input
-            type="range"
-            class="range-input ml-2"
+            type="number"
+            class="range-input md:ml-2"
             min={4}
             max={20}
             step={0.25}
@@ -269,6 +269,11 @@
     input{
       width: 50%;
     }
+
+    select{
+      width: 100%;
+    }
+    
 
     h2 {
       font-size: small;

@@ -50,7 +50,7 @@
       style="border:0; width: 100%; height: 290px;"
       allowfullscreen
     />
-    <div class="flex flex-col justify-evenly p-5 ">
+    <div class="flex flex-col justify-evenly p-5">
       <div>
         <h2>Contact Information</h2>
 
@@ -63,6 +63,8 @@
           conect@ezinore.com
         </p>
       </div>
+
+      <br>
 
       <div>
         <h2>Address</h2>
@@ -126,9 +128,10 @@
   }
 
   h2 {
-    color: black;
-    font-weight: 650;
-    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.313rem;
+    line-height: 1.75rem  ;
   }
 
   h1 {

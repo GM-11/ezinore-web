@@ -1,3 +1,13 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+  let video: HTMLVideoElement;
+
+  onMount(() => {
+    video.play();
+  });
+</script>
+
 <div class=" hidden md:grid grid-cols-2">
   <div id="leftbox">
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
@@ -8,17 +18,36 @@
 
     <a href="/about" id="button"> Learn More </a>
   </div>
-  <div
+  <!-- <div
     class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center z-0`}
-  />
+  /> -->
+  <video bind:this={video} autoplay muted loop>
+    <track kind="captions" />
+    <source
+      src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
+      type="video/mp4"
+    />
+  </video>
 </div>
 
 <div
   class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
 >
-<a href="/about" id="button"> Learn More </a>
-<h2>
-  We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy.</h2>
+  <video bind:this={video} autoplay muted loop>
+    <track kind="captions" />
+    <source
+      src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  <div class="overlay">
+    <a href="/about" id="button"> Learn More </a>
+    <h2>
+      We at Ezinore provide solutions for the generation, storage, monitoring
+      and intelligent control of clean energy.
+    </h2>
+  </div>
 </div>
 
 <style>
@@ -64,12 +93,13 @@
 
   h1 {
     margin-top: 5rem;
-
     text-align: left;
     font-weight: 800;
     font-size: 2.75rem;
     color: white;
     width: 50%;
+    line-height: 3.375rem;
+
   }
 
   @media screen and (max-width: 768px) {
@@ -77,8 +107,7 @@
       font-size: 1.5rem;
       text-align: center;
       width: 90%;
-      margin:0.2rem;
-
+      margin: 0.2rem;
     }
 
     h2 {
@@ -88,5 +117,19 @@
       margin: 0.2rem;
       line-height: 2rem;
     }
+  }
+
+  video {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 </style>

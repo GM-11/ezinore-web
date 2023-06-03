@@ -1,6 +1,8 @@
 <script>
   // @ts-nocheck
 
+  import {fade} from "svelte/transition";
+
   import Icon from "@iconify/svelte";
   //   let sate;
   //   let outputIrradiation;
@@ -27,7 +29,7 @@
   //   })
 </script>
 
-<div id="calc-modal" class="modal p-10">
+<div id="calc-modal" class="modal p-10" in:fade={{duration:100}} out:fade={{duration:100}}>
   <div class="flex flex-row w-full justify-between mb-10">
     <h2>Recommended Options for you</h2>
     <button on:click={crossOffOutput}><Icon icon="iconoir:cancel" /></button>
