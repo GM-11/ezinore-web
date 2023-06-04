@@ -1,22 +1,30 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import * as THREE from "three";
-  import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
   import sparko from "$lib/assets/sparko.png";
   import Form from "$lib/components/Form.svelte";
-  // import { scrol } from '$app/stores';
+  import ScrollModal from "$lib/components/Modals/ScrollModal.svelte";
+  import sparkoVideo from "$lib/assets/sparkoVideo.mp4";
+  import moblieApp from "$lib/assets/mobile-app.png";
 
   let video: HTMLVideoElement;
-
-  let scrollDiv1: HTMLDivElement;
-  let y1: number = 0;
-  let curr1: HTMLDivElement;
-  let curr1y: number = 10;
 
   onMount(() => {
     video.play();
   });
+
+  let list1 = [
+    "Utilizing artificial intelligence algorithms to analyse energy consumption patterns, weather patterns and solar irradiance to identify inefficiencies, and provide personalized recommendations for optimal energy usage.",
+    "A scalable and modular design, allowing easy integration into existing energy infrastructure and future expansions.",
+    "Inbuild battery system with integrated liquid cooling to increase battery life and efficiency.",
+  ];
+  let list2 = [
+    "Provides you with real-time insights into your energy consumption, generation, and storage",
+    "Offers detailed analytics and visualizations of your energy usage patterns. You can view historical data, analyse trends, and identify areas where you can optimize your energy consumption.",
+    "Allows to monitor and manage energy storage effectively. You can check the state of charge, set charging and discharging schedules, and receive notifications about the performance of your energy storage system.",
+    "Get notified about high energy usage, low battery levels, system malfunctions, or any other critical updates.",
+    "The app offers easy access to our customer care and after sales services.",  
+  ];
 </script>
 
 <div>
@@ -36,7 +44,7 @@
   <div class="bg-black">
     <video bind:this={video} autoplay muted loop>
       <track kind="captions" />
-      <source src="src/lib/assets/sparko-video.mp4" type="video/mp4" />
+      <source src={sparkoVideo} type="video/mp4" />
     </video>
   </div>
 
@@ -67,9 +75,11 @@
     />
   </div> -->
 
+  <ScrollModal list={list1} imagePath={sparko} />
+  <ScrollModal list={list2} imagePath={moblieApp} />
+
   <Form />
 </div>
-
 
 <style>
   /* canvas {
@@ -133,7 +143,7 @@
     img {
       translate: 0 0;
     }
-    p {
+    h3 {
       width: 100%;
       font-size: 1rem;
       translate: 0 -10rem;
@@ -142,6 +152,12 @@
 
     .main {
       padding: 3rem;
+    }
+
+    section {
+      translate: 0 -5rem;
+      padding: 1rem;
+      font-size: smaller;
     }
   }
 </style>
