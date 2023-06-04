@@ -21,7 +21,7 @@
   }
 </script>
 
-<nav class="md:flex flex-col hidden">
+<nav class="md:flex flex-col hidden ">
   <div
     class=" z-20 text-black items-center flex flex-row justify-between w-full p-5"
   >
@@ -66,13 +66,13 @@
   <h3>@ Ezinore 2022. All Right Reserved</h3>
 </nav>
 
-<nav class="md:hidden flex flex-col absolute">
-  <div class="flex flex-row justify-between">
+<nav class="md:hidden flex flex-col absolute w-full">
+  <div class="flex flex-row justify-between items-center">
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><img src={logo} width="200" alt="" /> </a>
+      <a href="/" class="nav-element"><img src={logo} width="120" alt="" /> </a>
     {:else}
       <a href="#home" on:click={scrollToElement}>
-        <img src={logo} width="200" alt="" class="nav-element cursor-pointer" />
+        <img src={logo} width="120" alt="" class="nav-element cursor-pointer" />
       </a>
     {/if}
 
@@ -178,11 +178,11 @@
       color: black;
       text-align: center;
       justify-content: center;
+      align-items: center;
       display: flex;
-      padding: 0.5rem;
       font-size: 1rem;
       background-color: #f4b931;
-      width: 50%;
+      width: 40%;
     }
   }
 </style>

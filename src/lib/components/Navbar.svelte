@@ -13,7 +13,7 @@
 </script>
 
 <nav
-  class=" hidden z-20 text-black items-center md:flex flex-row absolute justify-between w-full md:p-5 p-2"
+  class=" hidden z-20 text-black items-center md:flex flex-row   justify-between w-full md:p-5 p-2"
 >
   {#if $page.url.pathname !== "/"}
     <a href="/" class="nav-element"><img src={logo} width="150" alt="" /> </a>
@@ -35,7 +35,7 @@
   </div>
 </nav>
 
-<nav class="flex md:hidden w-full bg-white z-20 absolute p-2 justify-between">
+<nav class="flex md:hidden w-full bg-white z-20  p-2 justify-between">
   {#if $page.url.pathname !== "/"}
     <a href="/" class=" m-0"><img src={logo} width="150" alt="" /> </a>
   {:else}

@@ -63,8 +63,8 @@
   class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
 >
 <a href="/about" id="button"> Learn More </a>
-<h2>
-  We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy.</h2>
+<h6>
+  We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy.</h6>
 </div>
 
 <div class="py-10 px-14">
@@ -193,6 +193,13 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2.5rem;
+  }
+  h6 {
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
   }
   h5 {
     font-style: normal;
