@@ -132,7 +132,7 @@
   </ul>
 </div>
 
-<Testimonials />
+<!-- <Testimonials /> -->
 
 <style>
   li {

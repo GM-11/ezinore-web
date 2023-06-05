@@ -78,7 +78,7 @@
   <ScrollModal list={list1} imagePath={sparko} />
   <ScrollModal list={list2} imagePath={moblieApp} />
 
-  <Form />
+  <!-- <Form /> -->
 </div>
 
 <style>

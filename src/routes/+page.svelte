@@ -13,10 +13,10 @@
 
 <LandingPage />
 <Description />
-<Form />
+<!-- <Form /> -->
 <Whyus/>
 <Services />
 <Sellingto/>
-<Testimonials/>
+<!-- <Testimonials/> -->
 <Faq/>
 
