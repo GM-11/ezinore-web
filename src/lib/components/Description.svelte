@@ -1,15 +1,15 @@
 <script>
-  import product from "$lib/assets/product.png";
+  import product from "$lib/assets/sparko-with-app.png";
 </script>
 
 <div id="main">
   <div class="col-span-1 flex justify-center items-center">
     <div class="hidden md:flex">
-      <img width="400" src={product} alt="" />
+      <img width="400" src={product} alt="" style="margin:3rem;"/>
     </div>
 
     <div class="flex md:hidden">
-      <img width="200" src={product} alt="" style="margin:1rem;" />
+      <img width="200" src={product} alt="" style="margin:3rem;" />
     </div>
   </div>
   <div class="col-span-1 content">

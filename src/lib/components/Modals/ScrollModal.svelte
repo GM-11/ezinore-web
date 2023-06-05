@@ -12,13 +12,15 @@
   $: scrollPosition = 0;
 
   if (browser) {
-    onMount(() => {
-      window.addEventListener("scroll", handleScroll);
-    });
+    // onMount(() => {
+    //   window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    // });
 
     onDestroy(() => {
-      scrollPosition = 0;
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", () => {
+        scrollPosition = 0;
+      });
     });
 
     afterUpdate(() => {
@@ -34,11 +36,11 @@
   }
 </script>
 
-<div id="second-page" class="h-full p-3">
+<div id="second-page" class=" p-3">
   <img
     transition:fade
     class={"image"}
-    style={`transform: rotateY(${rotation}deg); position:sticky;top: 20%; left:40%;padding:1rem;`}
+    style={`transform: rotateY(${rotation}deg); z-index:1; position:sticky;top: 20%; left:40%;padding:1rem;`}
     src={imagePath}
     width="270"
     alt=""
@@ -49,7 +51,11 @@
       <li>
         <section
           in:fade
-          style={`${list.indexOf(item) % 2 === 0 ? "" : "translate: 250% 0;"}`}
+          style={`${
+            list.indexOf(item) % 2 === 0
+              ? "translate: 20% 0;"
+              : "translate: 230% 0;"
+          }`}
         >
           {item}
         </section>
@@ -68,11 +74,6 @@
 </div>
 
 <style>
-  /* img {
-    width: 200px;
-    height: 200px;
-  } */
-
   #second-page {
     background: linear-gradient(
         0deg,
@@ -87,12 +88,29 @@
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
-
-    /* position: absolute; */
-
-    translate: 0 -4rem;
+    scroll-snap-align: start;
+    font-size: 1.3rem;
     width: 20rem;
     margin: 5rem;
+    font-weight: 600;
+  }
+  li {
+    height: 80vh;
+    background-color: cadetblue;
+    border: 1px solid #000;
+    /* scroll-snap-stop: always; */
+
+    scroll-snap-align: start;
+  }
+
+  ul {
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    height: max-content;
+    scroll-snap-points-y: repeat(100%);
+    scroll-snap-type: mandatory;
+    scroll-snap-destination: 0% 0%;
   }
 
   @media screen and (max-width: 768px) {
@@ -101,9 +119,8 @@
       border-radius: 16px;
       padding: 1rem;
       text-align: center;
-
+      z-index: 10;
       font-size: 1rem;
-      translate: 0 -4rem;
       width: 10rem;
       margin: 2.5rem;
     }
