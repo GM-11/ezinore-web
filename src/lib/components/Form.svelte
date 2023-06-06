@@ -65,7 +65,7 @@
 <div class=" flex-col flex items-center">
   <div class=" flex flex-col md:flex-row justify-between w-full p-10">
     <div class=" flex flex-col items-start h-full md:w-[40vw]">
-      <h1>Calculate your investments with us</h1>
+      <h1>Cost of the solution</h1>
 
       <p class="mb-5">The Sparko comes in three configurations:</p>
       <ul
@@ -196,13 +196,16 @@
     line-height: 1;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
+    font-family: 'Aspekta';
   }
 
   h2 {
     color: black;
     font-weight: bold;
     font-size: 1rem;
+    font-family: 'Supreme';
   }
+
   input {
     background-color: #0721252c;
     font-weight: bold;

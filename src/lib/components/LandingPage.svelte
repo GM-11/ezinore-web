@@ -9,7 +9,7 @@
 </script>
 
 <div class=" hidden md:grid grid-cols-2">
-  <div id="leftbox">
+  <div id="leftbox" class="col-span-1">
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
     <h2>
       A comprehensive solution to meet all your energy needs, including
@@ -63,6 +63,7 @@
     margin-block: 1.5rem;
     background-color: #f4b931;
     transition: 0.3s;
+    font-family: "Supreme";
   }
 
   #button:hover {
@@ -85,10 +86,12 @@
 
   h2 {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     color: white;
     width: 50%;
     margin-top: 1.5rem;
+    font-family: "Supreme";
+
   }
 
   h1 {
@@ -99,6 +102,7 @@
     color: white;
     width: 50%;
     line-height: 3.375rem;
+    font-family: 'Aspekta' ;
 
   }
 

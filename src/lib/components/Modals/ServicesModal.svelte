@@ -24,6 +24,7 @@
   }
 
   h1 {
+    font-family: 'Aspekta';
     font-size: 2.5em;
     padding-bottom: 0.2em;
     color: black;
@@ -43,6 +44,7 @@
     margin-right: 10rem;
   }
   p {
+    font-family: 'Supreme';
     font-size: 1em;
     color: #072125d0;
     font-weight: 700;

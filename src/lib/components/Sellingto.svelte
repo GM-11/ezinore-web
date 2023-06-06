@@ -6,10 +6,10 @@
 <div id="sellingto">
   <div>
     <h1>Who are we selling to?</h1>
-    <h2 class="md:flex hidden">
+    <h3 class="md:flex hidden">
       We are catering to both the sectors and provide customized solutions to
       everyone.
-    </h2>
+    </h3>
   </div>
   <div class="flex flex-row">
     <div class="flex flex-col items-center justify-center">
@@ -26,8 +26,10 @@
 <style>
   h1 {
     text-align: left;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 2.75rem;
+    font-family: 'Aspekta';
+
   }
   img{
     width: 50%;
@@ -45,10 +47,17 @@
     background-color: rgb(240, 240, 240);
   }
 
-  h2 {
+  h3 {
     font-style: normal;
     font-weight: 500;
     margin-top: 1.5rem;
+    font-family: 'Supreme';
+  }
+  h2 {
+    font-style: normal;
+    font-weight: 800;
+    margin-top: 1.5rem;
+    font-family: 'Aspekta';
   }
 
   @media (max-width: 768px) {

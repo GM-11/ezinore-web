@@ -62,6 +62,7 @@
     text-align: center;
     font-size: 2.75rem;
     font-weight: 650;
+    font-family: 'Aspekta';
   }
 
   .btn {
@@ -101,6 +102,7 @@
     font-weight: 700;
     font-size: 1.313rem;
     line-height: 28px;
+    font-family: 'Aspekta';
   }
 
   .faq-answer {
@@ -108,9 +110,11 @@
     /* display: none; */
     background-color: #fff;
     /* transition:  0.3s ease-out; */
+    font-family: 'Supreme';
   }
-
+  
   .faq-answer.active {
+    font-family: 'Supreme';
     display: block;
     max-height: 1000px; /* Adjust this value to your desired maximum height */
     transition: 0.3s ease-in;

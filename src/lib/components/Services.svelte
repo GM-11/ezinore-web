@@ -84,6 +84,7 @@
     margin-top: 1rem;
     margin-left: 1rem;
     font-weight: bold;
+    font-family: 'Aspekta';
   }
 
   @media screen and (max-width: 768px) {

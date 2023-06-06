@@ -65,6 +65,7 @@
   h2 {
     font-weight: 650;
     margin: 1rem 1rem;
+    font-family: 'Aspekta';
     font-size: 1.5rem;
   }
 
@@ -84,6 +85,8 @@
   p {
     color: #072125;
     font-size: 0.875rem;
+    font-family: 'Supreme';
+    font-weight: 550;
   }
   h1 {
     color: black;
@@ -91,6 +94,7 @@
     margin-top: 1rem;
     margin-left: 1rem;
     font-weight: bold;
+    font-family: 'Aspekta';
   }
 
   img {

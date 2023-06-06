@@ -125,6 +125,7 @@
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 1rem;
+    font-family: 'Supreme';
   }
 
   h2 {
@@ -132,13 +133,14 @@
     font-weight: 700;
     font-size: 1.313rem;
     line-height: 1.75rem  ;
+    font-family: 'Supreme';
   }
 
   h1 {
     font-style: normal;
     font-weight: 650;
     font-size: 2rem;
-
+    font-family: 'Aspekta';
     color: #072125;
   }
 </style>

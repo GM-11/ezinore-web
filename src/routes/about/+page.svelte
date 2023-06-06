@@ -193,6 +193,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2.5rem;
+    font-family:'Aspekta';
   }
   h6 {
     font-style: normal;
@@ -200,6 +201,7 @@
     text-align: center;
     font-size: 1.5rem;
     color: white;
+    font-family:'Supreme';
   }
   h5 {
     font-style: normal;
@@ -207,6 +209,7 @@
     color: white;
     width: 50%;
     margin-top: 1.5rem;
+    font-family:'Supreme';
   }
 
   h1 {
@@ -217,6 +220,7 @@
     color: white;
     width: 50%;
     line-height: 3.375rem;
+    font-family: 'Aspekta';
   }
 
   h4 {
@@ -225,6 +229,7 @@
     font-size: 1.1rem;
     line-height: 21px;
     color: #072125cc;
+    font-family:'Supreme';
   }
 
   h3 {
@@ -233,6 +238,7 @@
     font-size: 1.6rem;
     padding-block: 0.5rem;
     line-height: 32px;
+    font-family:'Supreme';
   }
 
   @media screen and (max-width: 768px) {

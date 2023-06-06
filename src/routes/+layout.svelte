@@ -18,8 +18,6 @@
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-  .main {
-    font-family: "Poppins", sans-serif;
-    src: url("/fonts/Aspekta-100.ttf");
-  }
+  @import "../fonts.css";
+
 </style>

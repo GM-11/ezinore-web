@@ -105,6 +105,7 @@
     position: absolute;
     translate: 0 -4rem;
     margin: 1rem;
+    font-family: 'Supreme';
   }
 
   video {
@@ -118,11 +119,12 @@
     font-weight: 650;
     font-size: 8rem;
     width: 100%;
-
+    font-family: 'Aspekta';
     color: #ddf6a2;
   }
 
   h3 {
+    font-family: 'Supreme';
     font-style: normal;
     font-weight: 650;
     font-size: 1.563rem;

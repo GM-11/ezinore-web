@@ -12,10 +12,10 @@
   $: scrollPosition = 0;
 
   if (browser) {
-    // onMount(() => {
+    onMount(() => {
     //   window.addEventListener("scroll", handleScroll);
     window.addEventListener("scroll", handleScroll);
-    // });
+    });
 
     onDestroy(() => {
       window.removeEventListener("scroll", () => {
@@ -89,16 +89,14 @@
     padding: 1.5rem;
     text-align: center;
     scroll-snap-align: start;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     width: 20rem;
     margin: 5rem;
-    font-weight: 600;
+    font-weight: 550;
   }
   li {
     height: 80vh;
-    background-color: cadetblue;
-    border: 1px solid #000;
-    /* scroll-snap-stop: always; */
+    scroll-snap-stop: always;
 
     scroll-snap-align: start;
   }
@@ -110,6 +108,7 @@
     height: max-content;
     scroll-snap-points-y: repeat(100%);
     scroll-snap-type: mandatory;
+    /* height: 100vh; */
     scroll-snap-destination: 0% 0%;
   }
 

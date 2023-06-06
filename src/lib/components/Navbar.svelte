@@ -69,7 +69,7 @@
   .nav-element {
     font-weight: 900;
     margin-inline: 2rem;
-
+    font-family: 'Supreme';
     transition: transform 0.05s ease-in;
   }
 
