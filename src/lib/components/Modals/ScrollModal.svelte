@@ -93,6 +93,7 @@
     width: 20rem;
     margin: 5rem;
     font-weight: 550;
+    font-family: 'Supreme';
   }
   li {
     height: 80vh;
