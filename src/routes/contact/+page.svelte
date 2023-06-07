@@ -64,7 +64,7 @@
         </p>
       </div>
 
-      <br>
+      <br />
 
       <div>
         <h2>Address</h2>
@@ -89,10 +89,11 @@
   .main {
     background: linear-gradient(
         0deg,
-        rgba(255, 255, 255, 0.97),
-        rgba(255, 255, 255, 0.97)
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
       ),
       #072125;
+      margin: 2rem;
     border-radius: 20px;
   }
 
@@ -125,22 +126,22 @@
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 1rem;
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
 
   h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 1.313rem;
-    line-height: 1.75rem  ;
-    font-family: 'Supreme';
+    line-height: 1.75rem;
+    font-family: "Supreme";
   }
 
   h1 {
     font-style: normal;
     font-weight: 650;
     font-size: 2rem;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
     color: #072125;
   }
 </style>
