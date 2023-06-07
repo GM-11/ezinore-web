@@ -5,17 +5,65 @@
 
   import { browser } from "$app/environment";
 
+  import * as THREE from "three";
+  import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
   export let imagePath: string;
+  // export let modelPath: string;
   export let list: string[];
 
   $: rotation = 0;
   $: scrollPosition = 0;
 
+  let container: { appendChild: (arg0: HTMLCanvasElement) => void };
+  let camera: THREE.PerspectiveCamera,
+    scene: THREE.Scene,
+    renderer: THREE.WebGLRenderer;
+
   if (browser) {
     onMount(() => {
-    //   window.addEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", handleScroll);
+      // Initialize the three.js scene
+      // initScene();
+
+      window.addEventListener("scroll", handleScroll);
+
+      // Load the glTF model
+      // loadModel(modelPath);
     });
+
+    function initScene() {
+      // Create the camera
+      camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      camera.position.z = 5;
+
+      // Create the scene
+      scene = new THREE.Scene();
+
+      // Create the renderer
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      container.appendChild(renderer.domElement);
+
+      // Start the render loop
+      requestAnimationFrame(render);
+    }
+
+    function loadModel(url: string) {
+      const loader = new GLTFLoader();
+      loader.load(url, function (gltf) {
+        scene.add(gltf.scene);
+      });
+    }
+
+    function render() {
+      requestAnimationFrame(render);
+      renderer.render(scene, camera);
+    }
 
     onDestroy(() => {
       window.removeEventListener("scroll", () => {
@@ -45,6 +93,12 @@
     width="270"
     alt=""
   />
+
+
+  <!-- <div
+    bind:this={container}
+    style={`transform: rotateY(${rotation}deg); z-index:1; position:sticky;top: 20%; left:40%;padding:1rem;`}
+  /> -->
 
   <ul class="hidden md:flex flex-col justify-between">
     {#each list as item}
@@ -93,7 +147,7 @@
     width: 20rem;
     margin: 5rem;
     font-weight: 550;
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
   li {
     height: 80vh;

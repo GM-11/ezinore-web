@@ -6,6 +6,7 @@
   import ScrollModal from "$lib/components/Modals/ScrollModal.svelte";
   import sparkoVideo from "$lib/assets/sparkoVideo.mp4";
   import moblieApp from "$lib/assets/mobile-app.png";
+  // import sparko3d from "$lib/assets/sparko-3d.gltf";
 
   let video: HTMLVideoElement;
 
@@ -75,7 +76,9 @@
     />
   </div> -->
 
-  <ScrollModal list={list1} imagePath={sparko} />
+  <ScrollModal list={list1}  imagePath={sparko} />
+  <!-- <ScrollModal list={list1} modelPath={sparko3d} imagePath={sparko} /> -->
+  <!-- <ScrollModal list={list2} modelPath={sparko3d} imagePath={moblieApp} /> -->
   <ScrollModal list={list2} imagePath={moblieApp} />
 
   <!-- <Form /> -->
