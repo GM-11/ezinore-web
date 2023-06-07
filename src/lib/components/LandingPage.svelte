@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-
+  import sparkoVId from "$lib/assets/landing-page-vid.mp4";
   let video: HTMLVideoElement;
 
   onMount(() => {
@@ -8,8 +8,8 @@
   });
 </script>
 
-<div class=" hidden md:grid grid-cols-2">
-  <div id="leftbox" class="col-span-1">
+<div class=" h-screen hidden md:grid grid-cols-2">
+  <div id="leftbox" >
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
     <h2>
       A comprehensive solution to meet all your energy needs, including
@@ -21,10 +21,10 @@
   <!-- <div
     class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center z-0`}
   /> -->
-  <video bind:this={video} autoplay muted loop>
+  <video  bind:this={video} autoplay muted loop>
     <track kind="captions" />
     <source
-      src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
+    src={sparkoVId}
       type="video/mp4"
     />
   </video>
@@ -36,7 +36,7 @@
   <video bind:this={video} autoplay muted loop>
     <track kind="captions" />
     <source
-      src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
+      src={sparkoVId}
       type="video/mp4"
     />
   </video>
@@ -73,8 +73,8 @@
   }
 
   #leftbox {
-    width: 90vw;
     height: 100vh;
+    width: 90vw;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -126,6 +126,9 @@
   video {
     height: 100%;
     object-fit: cover;
+    width: 90vw;
+    overflow: hidden;
+    
   }
 
   .overlay {
