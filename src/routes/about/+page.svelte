@@ -5,7 +5,6 @@
 
   import nirmal from "$lib/assets/team/nirmal.png";
   import gopal from "$lib/assets/team/gopal.png";
-  import ritwij from "$lib/assets/team/ritwij.png";
   import rohit from "$lib/assets/team/rohit.png";
 
   import rightArrow from "$lib/assets/right-arrow.png";
@@ -36,11 +35,9 @@
   }
 
   const team = [
-    { img: nirmal, name: "Nirmal Yadav", position: "founder", id: 0 },
-    { img: ritwij, name: "Ritwij Kashyap", position: "founder", id: 1 },
-    { img: gopal, name: "Gopal Mathur", position: "founder", id: 2 },
-    { img: rohit, name: "Rohit Gorai", position: "founder", id: 3 },
-    { img: rohit, name: "Rohit Gorai", position: "founder", id: 4 },
+    { img: nirmal, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
+    { img: gopal, name: "Gopal Mathur", position: "Full Stack Developer", id: 2 },
+    { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 3 },
   ];
 </script>
 
