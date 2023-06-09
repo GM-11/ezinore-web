@@ -8,6 +8,7 @@
   import rohit from "$lib/assets/team/rohit.png";
   import saumya from "$lib/assets/team/saumya.jpg";
   import anshu from "$lib/assets/team/anshu.jpg";
+  import keshav from "$lib/assets/team/keshav.jpg";
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
@@ -42,11 +43,12 @@
     { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 3 },
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 1 },
     { img: anshu, name: "Anshu", position: "3D Designer", id: 4 },
+    { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
   ];
 </script>
 
-<div class=" hidden md:grid grid-cols-2">
-  <div id="leftbox">
+<div class=" hidden md:grid grid-cols-1">
+  <!-- <div id="leftbox">
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
     <h5>
       A comprehensive solution to meet all your energy needs, including
@@ -54,7 +56,7 @@
     </h5>
 
     <a href="/about" id="button"> Learn More </a>
-  </div>
+  </div> -->
   <div
     class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center z-0`}
   />

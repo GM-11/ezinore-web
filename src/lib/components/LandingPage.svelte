@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import sparkoVId from "$lib/assets/landing-page-vid.mp4";
+  import sparkoVId from "$lib/assets/landing-page-vid(1).mp4";
   let video: HTMLVideoElement;
 
   onMount(() => {
@@ -8,8 +8,8 @@
   });
 </script>
 
-<div class=" h-screen hidden md:grid grid-cols-2">
-  <div id="leftbox" >
+<div class=" h-screen hidden md:flex">
+  <div id="leftbox">
     <h1>Sustainable Energy Solutions for a Brighter Future</h1>
     <h2>
       A comprehensive solution to meet all your energy needs, including
@@ -18,15 +18,10 @@
 
     <a href="/about" id="button"> Learn More </a>
   </div>
-  <!-- <div
-    class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center z-0`}
-  /> -->
-  <video  bind:this={video} autoplay muted loop>
+
+  <video bind:this={video} autoplay muted loop>
     <track kind="captions" />
-    <source
-    src={sparkoVId}
-      type="video/mp4"
-    />
+    <source src={sparkoVId} type="video/mp4" />
   </video>
 </div>
 
@@ -35,10 +30,7 @@
 >
   <video bind:this={video} autoplay muted loop>
     <track kind="captions" />
-    <source
-      src={sparkoVId}
-      type="video/mp4"
-    />
+    <source src={sparkoVId} type="video/mp4" />
   </video>
 
   <div class="overlay">
@@ -73,6 +65,8 @@
   }
 
   #leftbox {
+    position: absolute;
+
     height: 100vh;
     width: 90vw;
     z-index: 10;
@@ -81,7 +75,13 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 2rem;
+    text-decoration-color: #020b16;
     background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%);
+    /* background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.92) 55.45%,
+      rgba(0, 0, 0, 0) 84.65%
+    ); */
   }
 
   h2 {
@@ -91,7 +91,6 @@
     width: 50%;
     margin-top: 1.5rem;
     font-family: "Supreme";
-
   }
 
   h1 {
@@ -102,8 +101,7 @@
     color: white;
     width: 50%;
     line-height: 3.375rem;
-    font-family: 'Aspekta' ;
-
+    font-family: "Aspekta";
   }
 
   @media screen and (max-width: 768px) {
@@ -126,9 +124,8 @@
   video {
     height: 100%;
     object-fit: cover;
-    width: 90vw;
+    width: 100vw;
     overflow: hidden;
-    
   }
 
   .overlay {
