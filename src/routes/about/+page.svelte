@@ -189,7 +189,8 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 2rem;
-    background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%);
+    background:  transparent;
+    /* background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%); */
   }
 
   h2 {

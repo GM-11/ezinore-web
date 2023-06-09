@@ -3,28 +3,28 @@
     {
       question: "What are you trying to solve?",
       answer:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis ultrices ultricies",
+        "We are providiging user with the ability to manage and utilize their energy effectively providing them with comprehnsive solutions which empowers our customers to overcome grid dependency and reduce their electricity bills.",
     },
     {
       question: "What should we choose ezinore?",
       answer:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis ultrices ultricies",
+        "You should choose ezinore as we provide realtime monitoring and controls on your mobile,with easy integration and installation of renewable energy solutions. We have a scalable and modular design. With the help of AI based energy optimization, our system helps user to reduce their electricity bills to more than 40% ",
     },
-    {
-      question: "What services does ezinore provide?",
-      answer:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis ultrices ultricies",
-    },
+    // {
+    //   question: "What services does ezinore provide?",
+    //   answer:
+    //     "",
+    // },
     {
       question: "How does SPARKO help in reducing my electricity bill?",
       answer:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis ultrices ultricies",
+        "We provide a single integrated platform that combines Artificial Intelligence, renewable energy solutions and energy storage technologies to optimize energy usage, reduce costs and promote sustainability.",
     },
-    {
-      question: "How do I get started with SPARKO?",
-      answer:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis ultrices ultricies",
-    },
+    // {
+    //   question: "How do I get started with SPARKO?",
+    //   answer:
+    //     " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis ultrices ultricies",
+    // },
   ];
 
   let activeIndex: any = null;

@@ -76,7 +76,8 @@
     align-items: flex-start;
     padding-left: 2rem;
     text-decoration-color: #020b16;
-    background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%);
+    background: transparent;
+    /* background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%); */
     /* background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.92) 55.45%,
@@ -91,9 +92,12 @@
     width: 50%;
     margin-top: 1.5rem;
     font-family: "Supreme";
+    text-shadow: 00px 0px 10px  #020b16;
   }
 
   h1 {
+    text-shadow: 0px 0px 7px #020b16;
+
     margin-top: 5rem;
     text-align: left;
     font-weight: 800;
