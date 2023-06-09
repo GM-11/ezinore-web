@@ -6,8 +6,8 @@
   import nirmal from "$lib/assets/team/nirmal.png";
   import gopal from "$lib/assets/team/gopal.png";
   import rohit from "$lib/assets/team/rohit.png";
-  import saumya from "$lib/assets/team/saumya.png";
-  import anshu from "$lib/assets/team/anshu.png";
+  import saumya from "$lib/assets/team/saumya.jpg";
+  import anshu from "$lib/assets/team/anshu.jpg";
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
