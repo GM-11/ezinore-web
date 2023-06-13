@@ -10,6 +10,7 @@
   import keshav from "$lib/assets/team/keshav.jpg";
   import nirmal from "$lib/assets/team/nirmal.png";
   import nirmal1 from "$lib/assets/team/1.png";
+  import sujal from "$lib/assets/team/sujal.png";
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
@@ -45,6 +46,7 @@
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 1 },
     { img: anshu, name: "Anshu", position: "3D Designer", id: 4 },
     { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
+    { img: sujal, name: "Emdedded Engineer", position: "AI/ML Engineer", id: 6},
   ];
 </script>
 
