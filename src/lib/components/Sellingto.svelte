@@ -32,8 +32,11 @@
 
   }
   img{
-    width: 50%;
-    min-width: 50%;
+    width: 60%;
+    min-width: 60%;
+    background-color: white;
+    border-radius: 100%;
+    padding: 1rem;
   }
   #sellingto {
     align-items: center;
