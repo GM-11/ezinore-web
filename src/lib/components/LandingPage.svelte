@@ -2,17 +2,20 @@
   import { onMount } from "svelte";
   import sparkoVId from "$lib/assets/landing-page-vid(1).mp4";
   let video: HTMLVideoElement;
-  $: time = 0;
+  let time = 0;
+  $: ended = false;
+  let duration: number;
 
   onMount(() => {
     video.play();
+    console.log(time);
   });
 </script>
 
 <div class=" h-screen hidden md:flex">
   <div id="leftbox">
-    <h1 style={``}>Sustainable Energy Solutions for a Brighter Future</h1>
-    <h2>
+    <h1 class="duration-500" style={`${ time > duration * 0.23 ? "color:white;" : "color:black;" } `}>Sustainable Energy Solutions for a Brighter Future</h1>
+    <h2 class="duration-500" style={`${ time > duration * 0.23 ? "color:white;" : "color:black;" } `}> 
       A comprehensive solution to meet all your energy needs, including
       generation, storage, and management.
     </h2>
@@ -20,7 +23,7 @@
     <a href="/about" id="button"> Learn More </a>
   </div>
 
-  <video bind:this={video} autoplay muted loop>
+  <video bind:this={video} bind:duration={duration} bind:currentTime={time} bind:ended={ended} autoplay muted loop>
     <track kind="captions" />
     <source src={sparkoVId} type="video/mp4" />
   </video>
@@ -49,8 +52,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
-    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: black;
     border-radius: 100px;
     margin-block: 1.5rem;
@@ -60,8 +65,8 @@
   }
 
   #button:hover {
-    color: #f4b931;
-    background-color: black;
+    color: black;
+    background-color: #fcd988;
     transition: 0.3s;
   }
 
@@ -93,7 +98,6 @@
     width: 50%;
     margin-top: 1.5rem;
     font-family: "Supreme";
-    text-shadow: 00px 0px 10px  #020b16;
   }
 
   h1 {
@@ -103,7 +107,7 @@
     text-align: left;
     font-weight: 800;
     font-size: 2.75rem;
-    color: white;
+    /* color: white; */
     width: 50%;
     line-height: 3.375rem;
     font-family: "Aspekta";
