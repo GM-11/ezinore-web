@@ -9,6 +9,7 @@
   import anshu from "$lib/assets/team/anshu.jpg";
   import keshav from "$lib/assets/team/keshav.jpg";
   import nirmal from "$lib/assets/team/nirmal.png";
+  import nirmal1 from "$lib/assets/team/1.png";
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
@@ -38,7 +39,7 @@
   }
 
   const team = [
-    { img: nirmal, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
+    { img: nirmal1, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
     { img: gopal, name: "Gopal Mathur", position: "Full Stack Developer", id: 2 },
     { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 3 },
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 1 },

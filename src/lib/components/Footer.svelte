@@ -28,12 +28,10 @@
     class=" z-20 text-black items-center flex flex-row justify-between w-full p-5"
   >
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><use href={logo} width="120" /> </a>
+      <a href="/" class="nav-element"><img src={logo} width="150" alt="" /> </a>
     {:else}
-      <a href="#home" on:click={scrollToElement}>
-        <svg class="nav-element cursor-pointer">
-          <use href={logo} />
-        </svg>
+      <a href="#home">
+        <img src={logo} width="150" alt="" class="nav-element cursor-pointer" />
       </a>
     {/if}
 
@@ -73,12 +71,10 @@
 <nav class="md:hidden flex flex-col absolute w-full">
   <div class="flex flex-row justify-between items-center">
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><use href={logo} width="120" /> </a>
+      <a href="/" class="nav-element"><img src={logo} alt="" /> </a>
     {:else}
-      <a href="#home" on:click={scrollToElement}>
-        <svg class="nav-element cursor-pointer">
-          <use href={logo} />
-        </svg>
+      <a href="#home">
+        <img src={logo} alt="" class="nav-element cursor-pointer" />
       </a>
     {/if}
 
@@ -147,14 +143,14 @@
   .nav-element {
     font-weight: 900;
     margin-inline: 2rem;
-
+    font-family: "Supreme";
     transition: transform 0.05s ease-in;
   }
 
   .nav-element:hover {
-    transform: scale(1.1, 1.1);
+    color: #f4b931;
+    transition: transform 0.05s ease-in;
   }
-
   nav {
     background: linear-gradient(
         0deg,
