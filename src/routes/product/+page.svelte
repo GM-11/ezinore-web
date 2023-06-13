@@ -3,7 +3,7 @@
 
   import sparko from "$lib/assets/sparko.png";
   import ScrollModal from "$lib/components/Modals/ScrollModal.svelte";
-  import sparkoVideo from "$lib/assets/sparkoVideo.mp4";
+  import sparkoVideo from "$lib/assets/sparkoVid.mp4";
   import moblieApp from "$lib/assets/mobile-app.png";
   // import sparko3d from "$lib/assets/sparko-3d.gltf";
 
@@ -42,7 +42,7 @@
     </h3>
   </div>
   <div class="bg-black">
-    <video bind:this={video} autoplay muted loop>
+    <video bind:this={video} autoplay muted loop >
       <track kind="captions" />
       <source src={sparkoVideo} type="video/mp4" />
     </video>
@@ -82,6 +82,11 @@
 
   <!-- <Form /> -->
 </div>
+
+
+<svelte:head>
+  <title>Our Products</title>
+</svelte:head>
 
 <style>
   /* canvas {

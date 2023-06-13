@@ -140,6 +140,11 @@
 
 <!-- <Testimonials /> -->
 
+
+<svelte:head>
+  <title>About Us</title>
+</svelte:head>
+
 <style>
   li {
     height: 30rem;
@@ -210,7 +215,7 @@
     color: white;
     font-family:'Supreme';
   }
-  h5 {
+  /* h5 {
     font-style: normal;
     font-weight: 500;
     color: white;
@@ -228,7 +233,7 @@
     width: 50%;
     line-height: 3.375rem;
     font-family: 'Aspekta';
-  }
+  } */
 
   h4 {
     font-style: normal;
@@ -249,9 +254,9 @@
   }
 
   @media screen and (max-width: 768px) {
-    h1 {
+    /* h1 {
       font-size: 1.5rem;
-    }
+    } */
 
     h2 {
       font-size: 2rem;

@@ -20,3 +20,7 @@
 <!-- <Testimonials/> -->
 <Faq/>
 
+<svelte:head>
+  <title>Welcome to Ezinore</title>
+</svelte:head>
+

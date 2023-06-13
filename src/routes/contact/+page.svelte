@@ -74,6 +74,12 @@
   </div>
 </div>
 
+<svelte:head>
+  <title>Contact Us</title>
+</svelte:head>
+
+
+
 <style>
   #rightbox {
     background-image: url("$lib/assets/join-us.png");
