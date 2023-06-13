@@ -13,14 +13,14 @@
   <div class="answers">
     <div class="ans">
       <img src={ans1} alt="" />
-      <h2>All in one solution</h2>
+      <h2>All-in-one solution</h2>
       <p>
         A single platform for generation, storage and management of the energy.
       </p>
     </div>
     <div class="ans">
       <img src={ans2} alt="" />
-      <h2>Realtime monitoring and Analytics</h2>
+      <h2>Real-time Monitoring and Analytics</h2>
       <p>
         Customer satisfaction is at the core of everything we do. We are
         committed to providing exceptional service and building long-term
@@ -29,7 +29,7 @@
     </div>
     <div class="ans">
       <img src={ans3} alt="" />
-      <h2>Quality and realiability</h2>
+      <h2>Quality and Re  liability</h2>
       <p>
         Partnered with reputable suppliers and manufacturers to get High-quality
         components.
@@ -37,7 +37,7 @@
     </div>
     <div class="ans">
       <img src={ans4} alt="" />
-      <h2>End to end solution</h2>
+      <h2>End-to-end Solution</h2>
       <p>
         Handle every aspect of your solar project, from initial project planning
         and engineering design to procurement, installation, and ongoing
@@ -46,12 +46,12 @@
     </div>
     <div class="ans">
       <img src={ans5} alt="" />
-      <h2>Extra savings</h2>
+      <h2>Extra Savings</h2>
       <p>30% to 40% more saving from regular solar inverter systems.</p>
     </div>
     <div class="ans">
       <img src={ans6} alt="" />
-      <h2>Experience and support</h2>
+      <h2>Experience and Support</h2>
       <p>
         Customer satisfaction is at the core of everything we do. We are
         committed to providing exceptional service and building long-term
