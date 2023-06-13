@@ -144,12 +144,12 @@
     font-weight: 900;
     margin-inline: 2rem;
     font-family: "Supreme";
-    transition: transform 0.05s ease-in;
+    transition:  0.2s;
   }
 
   .nav-element:hover {
     color: #f4b931;
-    transition: transform 0.05s ease-in;
+    transition:  0.2s ;
   }
   nav {
     background: linear-gradient(
@@ -172,6 +172,14 @@
     justify-content: center;
     display: flex;
     background-color: #f4b931;
+    transition: 0.3s;
+
+  }
+
+  .contact:hover {
+    color: black;
+    background-color: #fcd988;
+    transition: 0.3s;
   }
 
   @media screen and (max-width: 768px) {

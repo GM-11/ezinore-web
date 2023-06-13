@@ -74,8 +74,8 @@
   }
 
   #button:hover {
-    color: #f4b931;
-    background-color: black;
+    color: black;
+    background-color: #fcd988;
     transition: 0.3s;
   }
 

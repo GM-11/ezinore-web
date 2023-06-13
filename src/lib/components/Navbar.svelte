@@ -81,19 +81,20 @@
     font-weight: 900;
     margin-inline: 2rem;
     font-family: "Supreme";
-    transition: transform 0.05s ease-in;
+    transition: 0.2s;
   }
 
   .nav-element-sidebar {
     font-weight: 900;
     margin: 1rem 2rem 1rem 2rem;
     text-align: flex-start;
-    transition: transform 0.05s ease-in;
+    transition: 0.2s;
   }
 
   .nav-element:hover {
     color: #f4b931;
-    transition: transform 0.05s ease-in;
+    transition: 0.2s;
+
 
   }
 
@@ -118,5 +119,13 @@
     justify-content: center;
     display: flex;
     background-color: #f4b931;
+    transition: 0.2s;
+
+  }
+
+  .contact:hover{
+    color: black;
+    background-color: #fcd988;
+    transition: 0.2s;
   }
 </style>
