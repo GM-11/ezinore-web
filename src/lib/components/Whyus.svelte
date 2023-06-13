@@ -7,7 +7,7 @@
   import ans6 from "$lib/assets/ans/ans6.png";
 </script>
 
-<div class="main h-full bg-white p-10">
+<div class="main h-full  p-10">
   <h1>Why choose us?</h1>
 
   <div class="answers">
@@ -65,7 +65,7 @@
   h2 {
     font-weight: 650;
     margin: 1rem 1rem;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
     font-size: 1.5rem;
   }
 
@@ -75,6 +75,10 @@
     margin: 2rem;
     align-items: center;
     text-align: center;
+    background-color: white;
+    border-radius: 12px;
+
+    padding: 1.5rem;
   }
 
   .answers {
@@ -85,7 +89,7 @@
   p {
     color: #072125;
     font-size: 0.875rem;
-    font-family: 'Supreme';
+    font-family: "Supreme";
     font-weight: 550;
   }
   h1 {
@@ -94,25 +98,29 @@
     margin-top: 1rem;
     margin-left: 1rem;
     font-weight: bold;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
   }
 
   img {
     width: fit-content;
   }
 
-  @media screen and  (max-width: 768px) {
+  .main{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), #072125;
+  }
+
+  @media screen and (max-width: 768px) {
     .answers {
       display: flex;
       flex-direction: column;
     }
 
-    h1{
+    h1 {
       font-size: 2rem;
       text-align: center;
     }
 
-    h2{
+    h2 {
       font-size: 1.2rem;
     }
   }
