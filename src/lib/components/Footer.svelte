@@ -71,10 +71,10 @@
 <nav class="md:hidden flex flex-col absolute w-full">
   <div class="flex flex-row justify-between items-center">
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><img src={logo} alt="" /> </a>
+      <a href="/" class="nav-element"><img src={logo} alt="" width="100"/> </a>
     {:else}
       <a href="#home">
-        <img src={logo} alt="" class="nav-element cursor-pointer" />
+        <img src={logo} width="150" alt="" class="nav-element cursor-pointer" />
       </a>
     {/if}
 
@@ -190,9 +190,11 @@
       justify-content: center;
       align-items: center;
       display: flex;
-      font-size: 1rem;
+      font-size: 0.75rem;
       background-color: #f4b931;
-      width: 40%;
+      width: 30%;
+      padding: 0.5rem;
+      margin: 1rem;
     }
   }
 </style>

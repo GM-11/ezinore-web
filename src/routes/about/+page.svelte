@@ -258,9 +258,23 @@
       font-size: 1.5rem;
     } */
 
+    h3{
+      font-size: 1rem;
+      line-height: 1em;
+    }
+
+    h4{
+      font-size: 0.875rem;
+    }
+
     h2 {
       font-size: 2rem;
       text-align: center;
+    }
+
+    li{
+      height: 20rem;
+      min-width: 10rem;
     }
     .aim-para {
       width: 100%;

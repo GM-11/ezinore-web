@@ -133,11 +133,16 @@
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     h3 {
-      font-size: 1.25rem;
+      font-size: 1rem;
+    }
+
+    p{
+      font-size: 0.875rem;
+      line-height: 1.5rem;
     }
 
     .btn {
