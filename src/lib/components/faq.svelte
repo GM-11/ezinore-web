@@ -10,16 +10,16 @@
       answer:
         "You should choose ezinore as we provide realtime monitoring and controls on your mobile,with easy integration and installation of renewable energy solutions. We have a scalable and modular design. With the help of AI based energy optimization, our system helps user to reduce their electricity bills to more than 40% ",
     },
-    // {
-    //   question: "What services does ezinore provide?",
-    //   answer:
-    //     "",
-    // },
     {
       question: "How does SPARKO help in reducing my electricity bill?",
       answer:
         "We provide a single integrated platform that combines Artificial Intelligence, renewable energy solutions and energy storage technologies to optimize energy usage, reduce costs and promote sustainability.",
     },
+    // {
+    //   question: "What services does ezinore provide?",
+    //   answer:
+    //     "",
+    // },
     // {
     //   question: "How do I get started with SPARKO?",
     //   answer:

@@ -1,11 +1,13 @@
 <script lang="ts">
-  import logo from "$lib/assets/ezinore-logo-coloured.png";
+  // import logo from "$lib/assets/ezinore-logo-coloured.png";
   import { page } from "$app/stores";
 
   import instagram from "$lib/assets/social/instagram.png";
   import facebook from "$lib/assets/social/facebook.png";
   import twitter from "$lib/assets/social/twitter.png";
   import linkedin from "$lib/assets/social/linkedin.png";
+
+  import logo from "$lib/assets/ezinore-logo.svg";
 
   let menuOpen = false;
   let stuffAppear = false;
@@ -21,15 +23,17 @@
   }
 </script>
 
-<nav class="md:flex flex-col hidden ">
+<nav class="md:flex flex-col hidden">
   <div
     class=" z-20 text-black items-center flex flex-row justify-between w-full p-5"
   >
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><img src={logo} width="200" alt="" /> </a>
+      <a href="/" class="nav-element"><use href={logo} width="120" /> </a>
     {:else}
       <a href="#home" on:click={scrollToElement}>
-        <img src={logo} width="200" alt="" class="nav-element cursor-pointer" />
+        <svg class="nav-element cursor-pointer">
+          <use href={logo} />
+        </svg>
       </a>
     {/if}
 
@@ -69,10 +73,12 @@
 <nav class="md:hidden flex flex-col absolute w-full">
   <div class="flex flex-row justify-between items-center">
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><img src={logo} width="120" alt="" /> </a>
+      <a href="/" class="nav-element"><use href={logo} width="120" /> </a>
     {:else}
       <a href="#home" on:click={scrollToElement}>
-        <img src={logo} width="120" alt="" class="nav-element cursor-pointer" />
+        <svg class="nav-element cursor-pointer">
+          <use href={logo} />
+        </svg>
       </a>
     {/if}
 

@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import sparkoVId from "$lib/assets/landing-page-vid(1).mp4";
   let video: HTMLVideoElement;
+  $: time = 0;
 
   onMount(() => {
     video.play();
@@ -10,7 +11,7 @@
 
 <div class=" h-screen hidden md:flex">
   <div id="leftbox">
-    <h1>Sustainable Energy Solutions for a Brighter Future</h1>
+    <h1 style={``}>Sustainable Energy Solutions for a Brighter Future</h1>
     <h2>
       A comprehensive solution to meet all your energy needs, including
       generation, storage, and management.
@@ -96,7 +97,7 @@
   }
 
   h1 {
-    text-shadow: 0px 0px 7px #020b16;
+    /* text-shadow: 0px 0px 7px #020b16; */
 
     margin-top: 5rem;
     text-align: left;

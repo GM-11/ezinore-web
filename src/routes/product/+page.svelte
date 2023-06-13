@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
 
   import sparko from "$lib/assets/sparko.png";
-  import Form from "$lib/components/Form.svelte";
   import ScrollModal from "$lib/components/Modals/ScrollModal.svelte";
   import sparkoVideo from "$lib/assets/sparkoVideo.mp4";
   import moblieApp from "$lib/assets/mobile-app.png";
