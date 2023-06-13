@@ -111,8 +111,8 @@
   }
 
   button:hover {
-    background-color: black;
-    color: #f4b931;
+    color: black;
+    background-color: #fcd988;
     transition: 0.3s;
   }
 
