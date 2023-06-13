@@ -49,7 +49,7 @@
     </div>
     <div
       class={`${
-        index === activeIndex ? "h-auto" : "h-1"
+        index === activeIndex ? "h-auto" : "h-0"
       } transition duration-300 p-2`}
     >
       <p>{index === activeIndex ? faq.answer : ""}</p>
@@ -62,15 +62,20 @@
     text-align: center;
     font-size: 2.75rem;
     font-weight: 650;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
   }
 
   .btn {
-    width: 2.5rem;
-    height: 2.5rem;
     background: #072125;
-    border-radius: 100px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
     color: white;
+    ;
     font-size: 1.5rem;
   }
 
@@ -102,7 +107,7 @@
     font-weight: 700;
     font-size: 1.313rem;
     line-height: 28px;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
   }
 
   .faq-answer {
@@ -110,11 +115,11 @@
     /* display: none; */
     background-color: #fff;
     /* transition:  0.3s ease-out; */
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
-  
+
   .faq-answer.active {
-    font-family: 'Supreme';
+    font-family: "Supreme";
     display: block;
     max-height: 1000px; /* Adjust this value to your desired maximum height */
     transition: 0.3s ease-in;
@@ -127,19 +132,18 @@
       width: 90%;
     }
 
-    h1{
+    h1 {
       font-size: 1.5rem;
     }
 
-    h3{
+    h3 {
       font-size: 1.25rem;
     }
 
-    .btn{
+    .btn {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1rem;
     }
-
   }
 </style>
