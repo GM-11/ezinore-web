@@ -80,9 +80,10 @@
     }
 
     img{
-      widows: 130%;
-      min-width: 130%;
+      widows: 90%;
+      min-width: 90%;
       margin-inline: 1rem;
+
     }
 
   }

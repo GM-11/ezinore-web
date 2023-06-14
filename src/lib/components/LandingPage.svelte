@@ -125,6 +125,8 @@
       text-align: center;
       width: 90%;
       margin: 0.2rem;
+      font-weight: 650;
+      text-shadow: 0 0 4px black;
       margin-bottom: 6rem;
       line-height: 2rem;
     }

@@ -28,10 +28,10 @@
 </script>
 
 <div>
-  <div class=" flex flex-col p-2 items-center justify-center bg-black main">
+  <div class=" flex flex-col items-center  justify-center  main">
     <h1 class="text-center">Coming Soon</h1>
     <div class="md:hidden flex">
-      <img class="main-img" src={sparko} width="200" alt="" />
+      <img class="main-img" src={sparko} width="170" alt="" style="margin-top: 5rem;" />
     </div>
     <div class="md:flex hidden">
       <img class="main-img" src={sparko} width="250" alt="" />
@@ -128,6 +128,7 @@
     scale: 0.8;
   }
   h1 {
+    margin-top: 5rem;
     font-style: normal;
     font-weight: 650;
     font-size: 8rem;
@@ -144,9 +145,10 @@
     line-height: 2rem;
     text-align: center;
     color: #ddf6a2;
-    width: 70%;
-    translate: 0 -15rem;
-    /* background-color: black; */
+    position: absolute;
+    width: 60%;
+    translate: 0 15rem ;
+    /* background-co0 lor: black; */
   }
 
   @media screen and (max-width: 768px) {
@@ -159,9 +161,9 @@
       translate: 0 0;
     }
     h3 {
-      width: 100%;
+      width: 90%;
       font-size: 1rem;
-      translate: 0 -10rem;
+      translate: 0 10rem;
       line-height: 1.28rem;
     }
 
