@@ -40,7 +40,7 @@
     </button>
   </div>
   <div
-    class="span-cols-1 w-[100%] flex flex-col bg-slate-300 rounded-3xl mt-10"
+    class="span-cols-1 w-[100%] flex flex-col bg-white rounded-3xl mt-10"
   >
     <iframe
       id="rightbox"
