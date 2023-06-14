@@ -4,7 +4,6 @@
   import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile).mp4";
   let video: HTMLVideoElement;
   let time = 0;
-  $: ended = false;
   let duration: number;
 
   onMount(() => {
@@ -24,7 +23,7 @@
     <a href="/about" id="button"> Learn More </a>
   </div>
 
-  <video bind:this={video} bind:duration={duration} bind:currentTime={time} bind:ended={ended} autoplay muted loop>
+  <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop>
     <track kind="captions" />
     <source src={sparkoVId} type="video/mp4" />
   </video>
@@ -33,7 +32,7 @@
 <div
   class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
 >
-  <video bind:this={video} bind:duration={duration} bind:currentTime={time} bind:ended={ended} autoplay muted loop>
+  <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop>
     <track kind="captions" />
     <source src={sparkoVIdMobile} type="video/mp4" />
   </video>
