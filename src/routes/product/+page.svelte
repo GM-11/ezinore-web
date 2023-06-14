@@ -41,7 +41,7 @@
       and in build liquid cooled energy storage system.
     </h3>
   </div>
-  <div class="bg-black">
+  <div class="bg-white">
     <video bind:this={video} autoplay muted loop >
       <track kind="captions" />
       <source src={sparkoVideo} type="video/mp4" />

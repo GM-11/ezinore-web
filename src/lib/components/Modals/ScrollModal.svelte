@@ -65,6 +65,7 @@
   p {
     margin-block: 1rem;
     font-family: "Supreme";
+    cursor: pointer;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
