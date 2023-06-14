@@ -43,7 +43,7 @@
 	"type": "module",
 	"dependencies": {
 		"@iconify/svelte": "^3.1.0",
-		"@sveltejs/adapter-vercel": "^2.4.1",
+		"@sveltejs/adapter-vercel": "^2.4.3",
 		"aws-sdk": "^2.1359.0",
 		"nodemailer": "^6.9.1",
 		"svelte-three": "^0.1.2",
