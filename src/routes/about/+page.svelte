@@ -41,12 +41,12 @@
 
   const team = [
     { img: nirmal1, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
-    { img: gopal, name: "Gopal Mathur", position: "Full Stack Developer", id: 2 },
-    { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 3 },
+    { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 2 },
+    { img: gopal, name: "Gopal Mathur", position: "Full Stack Developer", id: 3 },
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 1 },
     { img: anshu, name: "Anshu", position: "3D Designer", id: 4 },
     { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
-    { img: sujal, name: "Emdedded Engineer", position: "AI/ML Engineer", id: 6},
+    // { img: sujal, name: "Sujal", position: "Emdedded Engineer", id: 6},
   ];
 </script>
 
