@@ -8,7 +8,6 @@
   import Sellingto from "$lib/components/Sellingto.svelte";
   import Faq from "$lib/components/faq.svelte";
 
-  export const prerender = true;
 
 </script>
 
