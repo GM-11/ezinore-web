@@ -39,11 +39,11 @@
 </div>
 
 <div
-  class={`flex md:hidden bg-[url(lib/assets/landing-page-vid-mobile.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0`}
+  class={`flex md:hidden bg-[url(lib/assets/landing-page-mobile.PNG)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0`}
 >
   <!-- <video bind:this={video} bind:duration={duration} bind:currentTime={time}  muted loop>
     <track kind="captions" />
-    <source src={sparkoVIdMobile} type="video/mp4" />
+    <source src={sparkoVId} type="video/mp4" />
   </video> -->
 
   <div class="overlay">
