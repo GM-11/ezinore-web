@@ -29,7 +29,7 @@
     </div>
     <div class="ans">
       <img src={ans3} alt="" />
-      <h2>Quality and Re  liability</h2>
+      <h2>Quality and Reliability</h2>
       <p>
         Partnered with reputable suppliers and manufacturers to get High-quality
         components.
