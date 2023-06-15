@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import sparkoVId from "$lib/assets/landing-page-vid-compressed.mp4";
-  import sparkoVIdMobile from "$lib/assets/landing-page-vid-mobile-compressed.png";
+  import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile-compressed).mp4";
   import landingPageMobile from "$lib/assets/landing-page-vid-moble.png";
   let video: HTMLVideoElement;
   let time = 0;
@@ -31,6 +31,7 @@
     <source src={sparkoVId} type="video/mp4" />
   </video>
 </div>
+
 
 <div
   class={`flex md:hidden bg-[url(lib/assets/landing-page-vid-mobile.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0`}
