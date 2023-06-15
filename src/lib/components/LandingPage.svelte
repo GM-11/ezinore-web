@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import sparkoVId from "$lib/assets/landing-page-vid-compressed.webm";
-  import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile-compressed).webm";
+  import sparkoVId from "$lib/assets/landing-page-vid-compressed.mp4";
+  import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile-compressed).mp4";
   let video: HTMLVideoElement;
   let time = 0;
   let duration: number;
@@ -10,6 +10,8 @@
     video.play();
     console.log(time);
   });
+
+  
 </script>
 
 <div class=" h-screen hidden md:flex">
@@ -23,23 +25,24 @@
     <a href="/about" id="button"> Learn More </a>
   </div>
 
-  <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop preload="auto">
+  <video bind:this={video} bind:duration={duration} bind:currentTime={time}  muted loop>
     <track kind="captions" />
-    <source src={sparkoVId} type="video/webm" />
+    <source src={sparkoVId} type="video/mp4" />
   </video>
 </div>
 
 <div
   class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
 >
-  <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop>
+  <!-- <video bind:this={video} bind:duration={duration} bind:currentTime={time}  muted loop>
     <track kind="captions" />
-    <source src={sparkoVIdMobile} type="video/webm" />
-  </video>
+    <source src={sparkoVIdMobile} type="video/mp4" />
+  </video> -->
 
   <div class="overlay">
     <a href="/about" id="button"> Learn More </a>
-    <h2 class="duration-500" style={`${ time > duration * 0.23 ? "color:white;" : "color:black;" } `}>
+    <!-- <h2 class="duration-500" style={`${ time > duration * 0.23 ? "color:white;" : "color:black;" } `}> -->
+      <h2>
       Sustainable Energy Solutions for a Brighter Future
     </h2>
   </div>
