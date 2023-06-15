@@ -39,9 +39,7 @@
       Submit
     </button>
   </div>
-  <div
-    class="span-cols-1 w-[100%] flex flex-col bg-white rounded-3xl mt-10"
-  >
+  <div class="span-cols-1 w-[100%] flex flex-col bg-white rounded-3xl mt-10">
     <iframe
       id="rightbox"
       title="Map"
@@ -78,8 +76,6 @@
   <title>Contact Us</title>
 </svelte:head>
 
-
-
 <style>
   #rightbox {
     background-image: url("$lib/assets/join-us.png");
@@ -99,7 +95,7 @@
         rgba(255, 255, 255, 0.92)
       ),
       #072125;
-      margin: 2rem;
+    margin: 2rem;
     border-radius: 20px;
   }
 
@@ -149,5 +145,28 @@
     font-size: 2rem;
     font-family: "Aspekta";
     color: #072125;
+  }
+
+  @media screen and (max-width: 768px) {
+    .main {
+      margin: 2rem;
+      padding: 5%;
+    }
+    #rightbox {
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+    }
   }
 </style>
