@@ -81,7 +81,7 @@
     existing infrastructure.
   </p>
 
-  <div class="flex md:flex-row flex-col m-0 mt-10">
+  <div class="flex md:flex-row flex-col m-0 mt-10 md:w-full md:justify-between">
     <div class="ans">
       <img src={k1} alt="" />
       <p>
