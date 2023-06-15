@@ -73,7 +73,7 @@
   We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy.</h6>
 </div>
 
-<div class="py-10 px-14">
+<div class="py-10 md:px-14 px-4">
   <h2>Aim</h2>
   <p class="aim-para">
     Our goal is to revolutionise today's power grid system with the help of an
@@ -81,7 +81,7 @@
     existing infrastructure.
   </p>
 
-  <div class="flex md:flex-row flex-col mt-10 justify-between">
+  <div class="flex md:flex-row flex-col m-0 mt-10">
     <div class="ans">
       <img src={k1} alt="" />
       <p>
@@ -108,7 +108,7 @@
   <div class="flex flex-row justify-between">
     <h2>Team</h2>
 
-    <div class="md:flex hidden">
+    <!-- <div class="md:flex hidden">
       <button class="text-2xl" disabled={selected == 0} on:click={handlePrev}>
         <img class="handleScroll" alt="" src={leftArrow} />
       </button>
@@ -119,10 +119,10 @@
       >
         <img class="handleScroll" alt="" src={rightArrow} />
       </button>
-    </div>
+    </div> -->
   </div>
 
-  <ul class="slider h-full">
+  <ul class="slider">
     {#each team as member}
       <li
         id={`${member.id}`}
@@ -188,19 +188,6 @@
     width: 3rem;
   }
 
-  #leftbox {
-    width: 90vw;
-    height: 100vh;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 2rem;
-    background:  transparent;
-    /* background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%); */
-  }
-
   h2 {
     font-style: normal;
     font-weight: 600;
@@ -215,26 +202,6 @@
     color: white;
     font-family:'Supreme';
   }
-  /* h5 {
-    font-style: normal;
-    font-weight: 500;
-    color: white;
-    width: 50%;
-    margin-top: 1.5rem;
-    font-family:'Supreme';
-  }
-
-  h1 {
-    margin-top: 5rem;
-    text-align: left;
-    font-weight: 800;
-    font-size: 2.75rem;
-    color: white;
-    width: 50%;
-    line-height: 3.375rem;
-    font-family: 'Aspekta';
-  } */
-
   h4 {
     font-style: normal;
     font-weight: 700;
@@ -257,6 +224,10 @@
     /* h1 {
       font-size: 1.5rem;
     } */
+
+    p{
+      text-align: flex-start;
+    }
 
     h3{
       font-size: 1rem;
@@ -282,10 +253,12 @@
     }
     .ans {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20em;
-    padding-bottom: 2rem;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+    padding-bottom: 2rem  ;
+    margin: 0;
   }
 
     p{
@@ -311,7 +284,6 @@
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 35rem;
   }
 
   .slider::-webkit-scrollbar {
@@ -325,7 +297,7 @@
   .ans {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 20em;
     padding-bottom: 2rem;
   }
