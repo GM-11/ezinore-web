@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import sparkoVId from "$lib/assets/landing-page-vid(1).mp4";
-  import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile).mp4";
+  import sparkoVId from "$lib/assets/landing-page-vid-compressed.webm";
+  import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile-compressed).webm";
   let video: HTMLVideoElement;
   let time = 0;
   let duration: number;
@@ -23,9 +23,9 @@
     <a href="/about" id="button"> Learn More </a>
   </div>
 
-  <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop>
+  <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop preload="auto">
     <track kind="captions" />
-    <source src={sparkoVId} type="video/mp4" />
+    <source src={sparkoVId} type="video/webm" />
   </video>
 </div>
 
@@ -34,7 +34,7 @@
 >
   <video bind:this={video} bind:duration={duration} bind:currentTime={time} autoplay muted loop>
     <track kind="captions" />
-    <source src={sparkoVIdMobile} type="video/mp4" />
+    <source src={sparkoVIdMobile} type="video/webm" />
   </video>
 
   <div class="overlay">

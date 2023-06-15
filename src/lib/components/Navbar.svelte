@@ -39,7 +39,7 @@
   {#if $page.url.pathname !== "/"}
     <a href="/" class="nav-element"><img src={logo} width="150" alt="" /> </a>
   {:else}
-    <a href="#home">
+    <a href="/">
       <img src={logo} width="150" alt="" class="nav-element cursor-pointer" />
     </a>
   {/if}
