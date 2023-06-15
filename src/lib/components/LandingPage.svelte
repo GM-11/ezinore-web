@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import sparkoVId from "$lib/assets/landing-page-vid-compressed.mp4";
   import sparkoVIdMobile from "$lib/assets/landing-page-vid(mobile-compressed).mp4";
-  import landingPageMobile from "$lib/assets/landing-page-vid-moble.png";
   let video: HTMLVideoElement;
   let time = 0;
   let duration: number;
