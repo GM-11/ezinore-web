@@ -5,7 +5,6 @@
   import ScrollModal from "$lib/components/Modals/ScrollModal.svelte";
   import sparkoVideo from "$lib/assets/sparkoVid.mp4";
   import moblieApp from "$lib/assets/mobile-app.png";
-  // import sparko3d from "$lib/assets/sparko-3d.gltf";
 
   let video: HTMLVideoElement;
 
@@ -28,10 +27,16 @@
 </script>
 
 <div>
-  <div class=" flex flex-col items-center  justify-center  main">
+  <div class=" flex flex-col items-center justify-center main">
     <h1 class="text-center">Coming Soon</h1>
     <div class="md:hidden flex">
-      <img class="main-img" src={sparko} width="170" alt="" style="margin-top: 5rem;" />
+      <img
+        class="main-img"
+        src={sparko}
+        width="170"
+        alt=""
+        style="margin-top: 5rem;"
+      />
     </div>
     <div class="md:flex hidden">
       <img class="main-img" src={sparko} width="250" alt="" />
@@ -42,7 +47,7 @@
     </h3>
   </div>
   <div class="bg-white">
-    <video bind:this={video} autoplay muted loop >
+    <video bind:this={video} autoplay muted loop>
       <track kind="captions" />
       <source src={sparkoVideo} type="video/mp4" />
     </video>
@@ -57,45 +62,15 @@
     </p>
   </section>
 
-  <!-- <div
-    bind:this={scrollDiv1}
-    on:scroll={() => {
-      y1 = scrollDiv1.scrollTop;
-      curr1y += y1;
-      console.log(curr1y)
-    }}
-    class="h-[400vh] bg-red-300"
-  >
-    <img
-      bind:this={curr1}
-      src={sparko}
-      alt=""
-      style={`translate: 40vw ${curr1y}rem; position:absolute; z-index:30; transform: rotate(${y1}deg)`}
-      width="200"
-    />
-  </div> -->
-
   <ScrollModal list={list1} imagePath={sparko} num={1} />
-  <!-- <ScrollModal list={list1} modelPath={sparko3d} imagePath={sparko} /> -->
-  <!-- <ScrollModal list={list2} modelPath={sparko3d} imagePath={moblieApp} /> -->
   <ScrollModal list={list2} imagePath={moblieApp} num={2} />
-
-  <!-- <Form /> -->
 </div>
-
 
 <svelte:head>
   <title>Our Products</title>
-  </svelte:head>
+</svelte:head>
 
 <style>
-  /* canvas {
-    width: 50%;
-    height: 50%;
-    border: 2px solid red;
-    translate: transform(-50%, -50%);
-  } */
-
   .main {
     background-color: #0e0d0b;
   }
@@ -117,7 +92,7 @@
     text-decoration-color: #0c373df1;
   }
 
-  p{
+  p {
     color: #0c373df1;
   }
 
@@ -147,7 +122,7 @@
     color: #ddf6a2;
     position: absolute;
     width: 60%;
-    translate: 0 15rem ;
+    translate: 0 15rem;
     /* background-co0 lor: black; */
   }
 
