@@ -88,6 +88,7 @@
   <title>Our Products</title>
   <meta name="description" content="An AI powered smart energy control system with integrated inverter system
   and in build liquid cooled energy storage system.">
+  <link rel="canonical" href="https://ezinore.com/product" />
 </svelte:head>
 
 <style>
