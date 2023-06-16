@@ -149,15 +149,7 @@
 
 <svelte:head>
   <title>About Us</title>
-  <meta
-    name="description"
-    content=" We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy."
-  />
-  <meta
-    name="keywords"
-    content="Ezinore, Ezinore Energy, Ezinore Energy Solutions, Ezinore Energy Solutions Pvt Ltd, Ezinore Energy Solutions Private Limited,"
-  />
-  <link rel="canonical" href="https://ezinore.com/about" />
+ 
 </svelte:head>
 
 <style>

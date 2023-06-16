@@ -24,7 +24,5 @@
 
 <svelte:head>
   <title>Ezinore Pvt Ltd</title>
-  <meta name="description" content="Building for a sustainable future at Ezinore">
-  <link rel="canonical" href="https://ezinore.com/">
-</svelte:head>
+  </svelte:head>
 
