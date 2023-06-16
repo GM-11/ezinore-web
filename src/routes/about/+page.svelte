@@ -199,7 +199,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2.5rem;
-    font-family: "Aspekta";
+    font-family: 'Aspekta';
   }
   h6 {
     font-style: normal;
@@ -207,7 +207,7 @@
     text-align: center;
     font-size: 1.5rem;
     color: white;
-    font-family: "Supreme";
+    font-family: 'Supreme';
   }
   h4 {
     font-style: normal;
@@ -215,7 +215,7 @@
     font-size: 1.1rem;
     line-height: 21px;
     color: #072125cc;
-    font-family: "Supreme";
+    font-family: 'Supreme';
   }
 
   h3 {

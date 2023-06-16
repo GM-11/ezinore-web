@@ -77,6 +77,13 @@
 </nav>
 
 <style>
+
+@font-face{
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+
+
   .nav-element {
     font-weight: 900;
     margin-inline: 2rem;

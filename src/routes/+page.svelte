@@ -23,3 +23,14 @@
 <svelte:head>
   <title>Ezinore Pvt Ltd</title>
 </svelte:head>
+
+<style>
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+  @font-face {
+    font-family: "Aspekta";
+    src: url("/fonts/Aspekta-500.ttf");
+  }
+</style>

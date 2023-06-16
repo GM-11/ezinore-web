@@ -10,6 +10,8 @@ export default {
         'graybg' : '#0C0F0F',
         'primary-yellow' : '#F4B931'
       },
+      fontFamily : {
+        'supreme' : ['Supreme'] }
     }
   },
   plugins: [

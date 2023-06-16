@@ -5,7 +5,7 @@
 <div id="main">
   <div class="col-span-1 flex justify-center items-center">
     <div class="hidden md:flex">
-      <img width="400" src={product} alt="" style="margin:3rem;"/>
+      <img width="400" src={product} alt="" style="margin:3rem;" />
     </div>
 
     <div class="flex md:hidden">
@@ -26,6 +26,7 @@
 </div>
 
 <style>
+ 
   h1 {
     font-style: normal;
     font-weight: 650;
@@ -33,7 +34,7 @@
     line-height: 54px;
     color: black;
     margin-block: 1rem;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
   }
   p {
     font-style: normal;
@@ -42,7 +43,7 @@
     line-height: 1.75rem;
     color: #072125;
     letter-spacing: -0.035em;
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
   .content {
     display: flex;
@@ -70,7 +71,7 @@
     margin-block: 1.5rem;
     background-color: #f4b931;
     transition: 0.3s;
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
 
   #button:hover {
