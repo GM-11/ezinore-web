@@ -50,7 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
+    padding: 1rem 2rem;
     color: #072125;
     border-radius: 100px;
     margin-block: 1.5rem;
@@ -59,8 +59,8 @@
     font-family: "Supreme";
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
     letter-spacing: -0.035em;
   }
 
@@ -83,22 +83,9 @@
     padding-left: 2rem;
     text-decoration-color: #020b16;
     background: transparent;
-    /* background: linear-gradient(90deg, #020b16 55.45%, rgba(0, 0, 0, 0) 84.65%); */
-    /* background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.92) 55.45%,
-      rgba(0, 0, 0, 0) 84.65%
-    ); */
   }
 
   h2 {
-    /* font-style: normal;
-    font-weight: 400;
-    color: white;
-    width: 50%;
-    margin-top: 1.5rem;
-    font-family: "Supreme"; */
-
     font-family: "Supreme";
     font-style: normal;
     font-weight: 500;
@@ -133,9 +120,9 @@
       width: 90%;
       margin: 0.2rem;
       font-weight: 650;
-      text-shadow: 0 0 4px black;
       margin-bottom: 6rem;
       line-height: 2rem;
+      color: white;
     }
   }
 
