@@ -23,6 +23,7 @@
 <Faq/>
 
 <svelte:head>
-  <title>Welcome to Ezinore</title>
+  <title>Ezinore Pvt Ltd</title>
+  <meta name="description" content="Building for a sustainable future at Ezinore">
 </svelte:head>
 

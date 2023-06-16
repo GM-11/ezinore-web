@@ -42,7 +42,12 @@
   const team = [
     { img: nirmal1, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
     { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 2 },
-    { img: gopal, name: "Gopal Mathur", position: "Full Stack Developer", id: 3 },
+    {
+      img: gopal,
+      name: "Gopal Mathur",
+      position: "Full Stack Developer",
+      id: 3,
+    },
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 1 },
     { img: anshu, name: "Anshu", position: "3D Designer", id: 4 },
     { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
@@ -68,9 +73,11 @@
 <div
   class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
 >
-<a href="/about" id="button"> Learn More </a>
-<h6>
-  We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy.</h6>
+  <a href="/about" id="button"> Learn More </a>
+  <h6>
+    We at Ezinore provide solutions for the generation, storage, monitoring and
+    intelligent control of clean energy.
+  </h6>
 </div>
 
 <div class="py-10 md:px-14 px-4">
@@ -140,9 +147,12 @@
 
 <!-- <Testimonials /> -->
 
-
 <svelte:head>
   <title>About Us</title>
+  <meta
+    name="description"
+    content=" We at Ezinore provide solutions for the generation, storage, monitoring and intelligent control of clean energy."
+  />
 </svelte:head>
 
 <style>
@@ -192,7 +202,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2.5rem;
-    font-family:'Aspekta';
+    font-family: "Aspekta";
   }
   h6 {
     font-style: normal;
@@ -200,7 +210,7 @@
     text-align: center;
     font-size: 1.5rem;
     color: white;
-    font-family:'Supreme';
+    font-family: "Supreme";
   }
   h4 {
     font-style: normal;
@@ -208,7 +218,7 @@
     font-size: 1.1rem;
     line-height: 21px;
     color: #072125cc;
-    font-family:'Supreme';
+    font-family: "Supreme";
   }
 
   h3 {
@@ -217,7 +227,7 @@
     font-size: 1.6rem;
     padding-block: 0.5rem;
     line-height: 32px;
-    font-family:'Supreme';
+    font-family: "Supreme";
   }
 
   @media screen and (max-width: 768px) {
@@ -225,16 +235,16 @@
       font-size: 1.5rem;
     } */
 
-    p{
+    p {
       text-align: flex-start;
     }
 
-    h3{
+    h3 {
       font-size: 1rem;
       line-height: 1em;
     }
 
-    h4{
+    h4 {
       font-size: 0.875rem;
     }
 
@@ -243,7 +253,7 @@
       text-align: center;
     }
 
-    li{
+    li {
       height: 20rem;
       min-width: 10rem;
     }
@@ -252,19 +262,19 @@
       margin-bottom: 1rem;
     }
     .ans {
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: flex-start;
-    padding-bottom: 2rem  ;
-    margin: 0;
-  }
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: flex-start;
+      padding-bottom: 2rem;
+      margin: 0;
+    }
 
-    p{
+    p {
       text-align: center;
     }
-    img{
+    img {
       width: 30%;
       margin: 1rem;
     }
