@@ -1,85 +1,165 @@
 <script lang="ts">
-  export let imagePath: string;
-  export let num: number;
   export let list: string[];
+  export let num: number;
+  export let imagePath: string;
+  export let heading: string;
 
-  function scrolltoelement(id: string) {
-    const element = document.getElementById(id);
-    element!.scrollIntoView({ behavior: "smooth" });
+  import rightArrow from "$lib/assets/right-arrow.png";
+  import leftArrow from "$lib/assets/left-arrow.png";
+
+  let selected: number = 0;
+
+  function handleNext() {
+    if (selected < list.length - 1) {
+      selected++;
+      scrolltoView();
+    } else {
+      selected = 0;
+      scrolltoView();
+    }
+  }
+  function handlePrev() {
+    if (selected > 0) {
+      selected--;
+      scrolltoView();
+    } else {
+      selected = list.length - 1;
+      scrolltoView();
+    }
+  }
+
+  function scrolltoView() {
+    const element =
+      num === 1
+        ? document.getElementById(`id1-${selected}`)
+        : document.getElementById(`id2-${selected}`);
+    if (element)
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
   }
 </script>
 
-<div class=" h-screen md:grid md:grid-cols-2 m-2 hidden ">
-  {#if num === 1}
-    <div class="col-span-1 md:flex justify-center items-center ">
-      <img src={imagePath} width="250" alt="" />
-    </div>
-  {/if}
-  <div
-    class={`col-span-1 flex flex-col justify-center items-start`}
-  >
-    <div class=" scrollable-content">
+<h1>{heading}</h1>
+
+<div class="main">
+  <div class="flex md:hidden justify-center items-center">
+    <img width="150" src={imagePath} alt="" />
+  </div>
+  <div class="md:flex hidden justify-center items-center">
+    <img width="250" src={imagePath} alt="" />
+  </div>
+  <div>
+    <ul>
       {#each list as item}
-        <p id={list.indexOf(item).toString()}>{item}</p>
-      {/each} 
+        {#if num === 1}
+          <li
+            id={`id1-${list.indexOf(item)}`}
+            style={`${
+              selected === list.indexOf(item)
+                ? "color:rgba(7,33,37,0.75);"
+                : "color:rgba(7,33,37,0.2);"
+            } transition:0.5s;`}
+          >
+            {item}
+          </li>
+        {/if}
+        {#if num === 2}
+          <li
+            id={`id2-${list.indexOf(item)}`}
+            style={`${
+              selected === list.indexOf(item)
+                ? "color:rgba(7,33,37,0.75);"
+                : "color:rgba(7,33,37,0.2);"
+            } transition:0.5s;`}
+          >
+            {item}
+          </li>
+        {/if}
+      {/each}
+    </ul>
+    <div class="md:flex hidden">
+      <button class="text-2xl" on:click={handlePrev}>
+        <img width="75" class="handleScroll" alt="" src={leftArrow} />
+      </button>
+      <button class="text-2xl" on:click={handleNext}>
+        <img width="75" class="handleScroll" alt="" src={rightArrow} />
+      </button>
     </div>
   </div>
-  {#if num === 2}
-    <div class="col-span-1 md:flex justify-center items-center ">
-      <img src={imagePath} width="300" alt="" />
-    </div>
-  {/if}
-</div>
-<div class=" h-full grid md:grid-cols-1 m-2 md:hidden ">
-    <div class="col-span-1 md:flex justify-center items-center p-10 mt-12 ">
-      <img src={imagePath} width="200" alt="" />
-    </div>
-  <div
-    class={`col-span-1 flex flex-col justify-center items-start`}
-  >
-    <div class=" scrollable-content">
-      {#each list as item}
-        <p id={list.indexOf(item).toString()}>{item}</p>
-      {/each} 
-    </div>
-  </div>
-  
 </div>
 
 <style>
-  .scrollable-content::-webkit-scrollbar-thumb {
-    display: none;
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+  @font-face {
+    font-family: "Aspekta";
+    src: url("/fonts/Aspekta-500.ttf");
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
   }
 
-  /* Optional: Customize the scrollbar track */
-  .scrollable-content::-webkit-scrollbar-track {
-    display: none;
+  ul {
+    height: 50vh;
+    overflow-y: scroll;
+    padding: 2rem;
+  }
+
+  ul::-webkit-scrollbar {
     width: 0;
   }
-  .scrollable-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: rgba(255, 255, 255, 0.92);
-  }
-  p {
-    margin-block: 1rem;
+
+  li {
     font-family: "Supreme";
-    cursor: pointer;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
-    margin-inline: 5rem;
-    color: #b8c0c2f1;
+    margin: 3rem 0;
     letter-spacing: -0.035em;
-    transition: 0.1s ease-in-out;
+  }
+
+  h1 {
+    font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    color: rgba(7, 33, 37, 0.75);
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
   }
 
 
+  @media (max-width: 768px) {
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-  p:hover{
-    color: #0c373df1;
-    transition: 0.1s ease-in-out;
+    ul {
+      height: 50vh;
+      overflow-y: scroll;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1rem;
+      line-height: 1.3rem;
+      color: rgba(7, 33, 37, 0.75);
+      width: 80%;
+      margin: 5rem auto;
+      text-align: center;
+    }
   }
+
 </style>

@@ -26,45 +26,47 @@
   ];
 </script>
 
-<div>
-  <div class=" flex flex-col items-center justify-center main">
-    <h1 class="text-center">Coming Soon</h1>
-    <div class="md:hidden flex">
-      <img
-        class="main-img"
-        src={sparko}
-        width="170"
-        alt=""
-        style="margin-top: 5rem;"
-      />
-    </div>
-    <div class="md:flex hidden">
-      <img class="main-img" src={sparko} width="250" alt="" />
-    </div>
-    <h3>
-      An AI powered smart energy control system with integrated inverter system
-      and in build liquid cooled energy storage system.
-    </h3>
+<div class=" flex flex-col items-center justify-center main">
+  <h1 class="text-center">Coming Soon</h1>
+  <div class="md:hidden flex">
+    <img
+      class="main-img"
+      src={sparko}
+      width="170"
+      alt=""
+      style="margin-top: 5rem;"
+    />
   </div>
-  <div class="bg-white">
-    <video bind:this={video} autoplay muted loop>
-      <track kind="captions" />
-      <source src={sparkoVideo} type="video/mp4" />
-    </video>
+  <div class="md:flex hidden">
+    <img class="main-img" src={sparko} width="300" alt="" />
   </div>
-
-  <section>
-    <p>
-      Sparko tracks the amount of energy that solar panels produce and
-      automatically adjusts the energy flow from grids and solar panels for
-      maximum energy consumption. Any excess energy generated is stored in the
-      inbuilt battery system further savings.
-    </p>
-  </section>
-
-  <ScrollModal list={list1} imagePath={sparko} num={1} />
-  <ScrollModal list={list2} imagePath={moblieApp} num={2} />
+  <h2>
+    An AI powered smart energy control system with integrated inverter system
+    and in build liquid cooled energy storage system.
+  </h2>
 </div>
+<div class="bg-white">
+  <video bind:this={video} autoplay muted loop>
+    <track kind="captions" />
+    <source src={sparkoVideo} type="video/mp4" />
+  </video>
+</div>
+
+<ScrollModal
+  list={list1}
+  imagePath={sparko}
+  num={1}
+  heading="Sparko tracks the amount of energy that solar panels produce and automatically
+adjusts the energy flow from grids and solar panels for maximum energy
+consumption. Any excess energy generated is stored in the inbuilt battery
+system further savings."
+/>
+<ScrollModal
+  list={list2}
+  imagePath={moblieApp}
+  num={2}
+  heading="Sparko comes with an app that allows you to monitor and control the flow of energy."
+/>
 
 <svelte:head>
   <title>Our Products</title>
@@ -87,23 +89,6 @@
     translate: 0 -5rem;
   }
 
-  section {
-    background: #f1eded;
-
-    padding-inline: 10rem;
-    padding-block: 2.5rem;
-    text-align: center;
-    font-family: "Aspekta";
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 28px;
-    text-decoration-color: #0c373df1;
-  }
-
-  p {
-    color: #0c373df1;
-  }
-
   video {
     height: 100%;
     width: 100%;
@@ -120,18 +105,16 @@
     color: #ddf6a2;
   }
 
-  h3 {
-    font-family: "Supreme";
+  h2 {
+    font-family: "Aspekta";
     font-style: normal;
     font-weight: 650;
     font-size: 1.563rem;
     line-height: 2rem;
-    text-align: center;
-    color: #ddf6a2;
+    width: 50%;
     position: absolute;
-    width: 60%;
     translate: 0 15rem;
-    /* background-co0 lor: black; */
+    color: #ddf6a2;
   }
 
   @media screen and (max-width: 768px) {
@@ -143,7 +126,7 @@
     img {
       translate: 0 0;
     }
-    h3 {
+    h2 {
       width: 90%;
       font-size: 1rem;
       translate: 0 10rem;
@@ -152,11 +135,6 @@
 
     .main {
       padding: 3rem;
-    }
-
-    section {
-      padding: 1rem;
-      font-size: smaller;
     }
   }
 </style>
