@@ -8,9 +8,7 @@
   import saumya from "$lib/assets/team/saumya.jpg";
   import anshu from "$lib/assets/team/anshu.jpg";
   import keshav from "$lib/assets/team/keshav.jpg";
-  import nirmal from "$lib/assets/team/nirmal.png";
   import nirmal1 from "$lib/assets/team/1.png";
-  import sujal from "$lib/assets/team/sujal.png";
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
@@ -21,34 +19,42 @@
   function handleNext() {
     if (selected < team.length - 1) {
       selected++;
-      scrollIntoView();
+      scrolltoView();
+    } else {
+      selected = 0;
+      scrolltoView();
     }
   }
   function handlePrev() {
     if (selected > 0) {
       selected--;
-      scrollIntoView();
+      scrolltoView();
+    } else {
+      selected = team.length - 1;
+      scrolltoView();
     }
   }
 
-  function scrollIntoView() {
-    const element = document.getElementById(`${selected}`);
-    element!.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+  function scrolltoView() {
+    const element = document.getElementById(`id-${selected}`);
+    if (element)
+      element.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+        block: "end",
+      });
   }
 
   const team = [
     { img: nirmal1, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
-    { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 2 },
+    { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 1 },
     {
       img: gopal,
       name: "Gopal Mathur",
       position: "Full Stack Developer",
-      id: 3,
+      id: 2,
     },
-    { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 1 },
+    { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 3 },
     { img: anshu, name: "Anshu", position: "3D Designer", id: 4 },
     { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
     // { img: sujal, name: "Sujal", position: "Emdedded Engineer", id: 6},
@@ -105,14 +111,10 @@
   <div class="flex flex-row justify-between">
     <h2>Team</h2>
     <div class="md:flex hidden">
-      <button class="text-2xl" disabled={selected == 0} on:click={handlePrev}>
+      <button class="text-2xl" on:click={handlePrev}>
         <img class="handleScroll" alt="" src={leftArrow} />
       </button>
-      <button
-        class="text-2xl"
-        disabled={selected == team.length - 1}
-        on:click={handleNext}
-      >
+      <button class="text-2xl" on:click={handleNext}>
         <img class="handleScroll" alt="" src={rightArrow} />
       </button>
     </div>
@@ -122,11 +124,15 @@
   <ul class="slider">
     {#each team as member}
       <li
-        id={`${member.id}`}
+        id={`id-${member.id}`}
         class=" element"
-        style={`background-image: url('${member.img}'); background-size: cover; background-position: center;`}
+        style={`background-image: url('${
+          member.img
+        }'); background-size: cover; background-position: center; ${
+          selected === member.id ? "scale:1.05;" : "scale:1;"
+        } `}
       >
-        <div class=" w-full p-3 bg-white">
+        <div class=" w-full p-3 bg-white rounded-b-[19px]">
           <h3>{member.name}</h3>
           <br />
           <h4>{member.position}</h4>
@@ -165,8 +171,7 @@
     display: flex;
     flex-direction: column-reverse;
     transition: transform 0.3s ease;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     transition: 0.3s;
   }
   #button {
@@ -235,6 +240,7 @@
   }
 
   .slider {
+    height: fit-content;
     scrollbar-width: 0em;
     scrollbar-color: transparent transparent;
     align-items: flex-start;
