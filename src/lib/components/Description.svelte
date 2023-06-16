@@ -36,13 +36,13 @@
     font-family: "Aspekta";
   }
   p {
-    font-style: normal;
-    font-weight: 450;
-    font-size: 1.313rem;
-    line-height: 1.75rem;
-    color: #072125;
-    letter-spacing: -0.035em;
     font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    color: rgba(7, 33, 37, 0.75);
+    letter-spacing: -0.035em;
   }
   .content {
     display: flex;
@@ -60,19 +60,20 @@
 
   #button {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: black;
+    padding: 16px 32px;
+    color: #072125;
     border-radius: 100px;
     margin-block: 1.5rem;
     background-color: #f4b931;
     transition: 0.3s;
     font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
   }
 
   #button:hover {

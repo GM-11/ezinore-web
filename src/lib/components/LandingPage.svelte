@@ -15,13 +15,13 @@
   <div id="leftbox">
     <h1
       class="duration-500"
-      style={`${time > duration * 0.23 ? "color:white;" : "color:black;"} `}
+      style={`${time > duration * 0.23 ? "color:white;" : "color:#072125;"} `}
     >
       Sustainable Energy Solutions for a Brighter Future
     </h1>
     <h2
       class="duration-500"
-      style={`${time > duration * 0.23 ? "color:white;" : "color:black;"} `}
+      style={`${time > duration * 0.23 ? "color:white;" : "color:#072125;"} `}
     >
       A comprehensive solution to meet all your energy needs, including
       generation, storage, and management.
@@ -48,19 +48,20 @@
 <style>
   #button {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: black;
+    padding: 16px 32px;
+    color: #072125;
     border-radius: 100px;
     margin-block: 1.5rem;
     background-color: #f4b931;
     transition: 0.3s;
     font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
   }
 
   #button:hover {
@@ -91,25 +92,31 @@
   }
 
   h2 {
-    font-style: normal;
+    /* font-style: normal;
     font-weight: 400;
     color: white;
     width: 50%;
     margin-top: 1.5rem;
+    font-family: "Supreme"; */
+
     font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    width: 50%;
+    margin-top: 1.5rem;
+    letter-spacing: -0.035em;
+    color: #072125;
   }
 
   h1 {
-    /* text-shadow: 0px 0px 7px #020b16; */
-
-    margin-top: 5rem;
-    text-align: left;
-    font-weight: 800;
-    font-size: 2.75rem;
-    /* color: white; */
-    width: 50%;
-    line-height: 3.375rem;
     font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 650;
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+    width: 50%;
   }
 
   @media screen and (max-width: 768px) {

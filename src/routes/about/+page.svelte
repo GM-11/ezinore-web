@@ -99,11 +99,12 @@
       </p>
     </div>
   </div>
+</div>
 
+<div class="team-section m-0 py-12 md:px-14 px-4">
   <div class="flex flex-row justify-between">
     <h2>Team</h2>
-
-    <!-- <div class="md:flex hidden">
+    <div class="md:flex hidden">
       <button class="text-2xl" disabled={selected == 0} on:click={handlePrev}>
         <img class="handleScroll" alt="" src={leftArrow} />
       </button>
@@ -114,9 +115,10 @@
       >
         <img class="handleScroll" alt="" src={rightArrow} />
       </button>
-    </div> -->
+    </div>
   </div>
 
+<br>
   <ul class="slider">
     {#each team as member}
       <li
@@ -125,7 +127,9 @@
         style={`background-image: url('${member.img}'); background-size: cover; background-position: center;`}
       >
         <div class=" w-full p-3 bg-white">
+          
           <h3>{member.name}</h3>
+          <br>
           <h4>{member.position}</h4>
         </div>
       </li>
@@ -138,9 +142,17 @@
 </svelte:head>
 
 <style>
+  .team-section {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+      ),
+      #072125;
+  }
   li {
-    height: 30rem;
-    min-width: 20rem;
+    height: 27rem;
+    min-width: 17rem;
     margin: 1rem;
     display: flex;
     flex-direction: column-reverse;
@@ -174,7 +186,6 @@
     justify-self: center;
     align-items: center;
     border-radius: 150px;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     margin: 0 0.5rem;
     transition: 0.3s;
     width: 3rem;
@@ -187,27 +198,32 @@
     font-family: "Aspekta";
   }
   h4 {
+    font-family: "Supreme";
     font-style: normal;
     font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 21px;
-    color: #072125cc;
-    font-family: "Supreme";
+    font-size: 1.313rem;
+    line-height: 1.313rem;
+    color: rgba(7, 33, 37, 0.75);
+    letter-spacing: -0.02em;
   }
 
   h3 {
+    font-family: "Aspekta";
     font-style: normal;
     font-weight: 650;
-    font-size: 1.6rem;
-    padding-block: 0.5rem;
-    line-height: 32px;
-    font-family: "Supreme";
+    font-size: 1.563rem;
+    line-height: 2rem;
+    color: #072125;
   }
 
   p {
-    text-align: flex-start;
-    color: #072125cc;
     font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.035em;
+    color: rgba(7, 33, 37, 0.75);
   }
 
   .slider {
@@ -232,7 +248,7 @@
   .ans {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 20em;
     padding-bottom: 2rem;
   }
@@ -240,11 +256,12 @@
   .aim-para {
     margin-right: 20rem;
     margin-top: 1rem;
-    color: #072125;
+    font-family: "Supreme";
     font-style: normal;
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    letter-spacing: -0.035em;
   }
 
   @media screen and (max-width: 768px) {

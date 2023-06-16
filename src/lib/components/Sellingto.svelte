@@ -6,18 +6,21 @@
 <div id="sellingto">
   <div>
     <h1>Who are we selling to?</h1>
-    <h3 class="md:flex hidden">
+    <br />
+    <p class="md:flex hidden">
       We are catering to both the sectors and provide customized solutions to
       everyone.
-    </h3>
+    </p>
   </div>
   <div class="flex flex-row">
     <div class="flex flex-col items-center justify-center">
       <img src={residentialImage} alt="" />
+      <br/>
       <h2>Residential</h2>
     </div>
     <div class="flex flex-col items-center justify-center">
       <img src={commercialImage} alt="" />
+      <br/>
       <h2>Commercial</h2>
     </div>
   </div>
@@ -25,13 +28,15 @@
 
 <style>
   h1 {
-    text-align: left;
-    font-weight: 600;
+    font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 650;
     font-size: 2.75rem;
-    font-family: 'Aspekta';
-
+    line-height: 3.375rem;
+    text-align: left;
+    color: #072125;
   }
-  img{
+  img {
     width: 60%;
     min-width: 60%;
     background-color: white;
@@ -50,17 +55,26 @@
     background-color: rgb(240, 240, 240);
   }
 
-  h3 {
-    font-style: normal;
+  p {
+    /* font-style: normal;
     font-weight: 500;
     margin-top: 1.5rem;
-    font-family: 'Supreme';
+    font-family: 'Supreme'; */
+    font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    color: rgba(7, 33, 37, 0.75);
+    letter-spacing: -0.035em;
   }
   h2 {
+    font-family: "Aspekta";
     font-style: normal;
-    font-weight: 800;
-    margin-top: 1.5rem;
-    font-family: 'Aspekta';
+    font-weight: 700;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    color: rgba(7, 33, 37, 0.75);
   }
 
   @media (max-width: 768px) {
@@ -69,22 +83,20 @@
       flex-direction: column;
     }
 
-    h1{
+    h1 {
       font-size: 1.3rem;
       text-align: center;
     }
 
-    h2{
+    h2 {
       font-size: 1rem;
       text-align: center;
     }
 
-    img{
+    img {
       widows: 90%;
       min-width: 90%;
       margin-inline: 1rem;
-
     }
-
   }
 </style>

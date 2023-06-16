@@ -77,12 +77,19 @@
   }
 
   h1 {
-    color: white;
+    /* color: white;
     font-size: 3rem;
     margin-top: 1rem;
     margin-left: 1rem;
     font-weight: bold;
+    font-family: "Aspekta"; */
     font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 650;
+    font-size: 2.75rem;
+    margin-left: 1rem;
+    line-height: 3.375rem;
+    color: #ffffff;
   }
 
   @media screen and (max-width: 768px) {

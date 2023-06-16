@@ -1,17 +1,16 @@
 <script lang="ts">
-
-  export let content:string;
-  export let title:string;
-  export let imgPath:string;
+  export let content: string;
+  export let title: string;
+  export let imgPath: string;
 </script>
 
 <div class="main">
   <div class="content">
     <h1>{title}</h1>
+    <br>
     <p>{content}</p>
   </div>
   <img src={imgPath} alt="" style="width:60%" class="md:flex hidden" />
-  <!-- <img src={imgPath} alt="" style="width:50%" class="flex md:hidden absolute" /> -->
 </div>
 
 <style>
@@ -24,11 +23,12 @@
   }
 
   h1 {
-    font-family: 'Aspekta';
-    font-size: 2.5em;
-    padding-bottom: 0.2em;
-    color: black;
-    font-weight: bold;
+    font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 650;
+    font-size: 2.313rem;
+    line-height: 2.75rem;
+    color: #072125;
   }
   .main {
     background-color: white;
@@ -44,10 +44,13 @@
     margin-right: 10rem;
   }
   p {
-    font-family: 'Supreme';
-    font-size: 1em;
-    color: #072125d0;
-    font-weight: 700;
+    font-family: "Supreme";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    color: rgba(7, 33, 37, 0.75);
+    letter-spacing: -0.035em;
   }
 
   img {
@@ -58,34 +61,30 @@
   @media screen and (max-width: 786px) {
     h1 {
       font-size: 1.5em;
-
     }
 
-    p{
+    p {
       width: 100%;
     }
 
     .main {
       min-width: 16em;
-      /* flex-direction: column; */
       display: flex;
       justify-content: center;
       align-items: center;
-
       margin-right: 1rem;
     }
 
-    img{
+    img {
       translate: 3em -10em;
     }
 
-    .content{
+    .content {
       text-align: center;
       justify-content: center;
       align-items: center;
       display: flex;
       width: 100%;
     }
-
   }
 </style>

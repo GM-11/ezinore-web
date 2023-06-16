@@ -39,22 +39,19 @@
 </script>
 
 <h1>Frequently Asked Questions</h1>
+<br />
 {#each faqs as faq, index}
   <div class="faq-container">
-    <div class="flex flex-row justify-between">
+    <div class="flex flex-row justify-between items-center">
       <h2>{faq.question}</h2>
       <button class="btn" on:click={() => toggleFAQ(index)}
         >{index === activeIndex ? "-" : "+"}</button
       >
     </div>
-    <div
-      class={`${
-        index === activeIndex ? "h-auto" : "h-0"
-      } transition duration-300 p-2`}
-    >
-      <p>{index === activeIndex ? faq.answer : ""}</p>
-    </div>
   </div>
+  {#if index === activeIndex}
+    <p>{faq.answer}</p>
+  {/if}
 {/each}
 
 <style>
@@ -68,10 +65,13 @@
   }
 
   h1 {
-    text-align: center;
-    font-size: 2.75rem;
-    font-weight: 650;
     font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 650;
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+    text-align: center;
+    color: #000000;
   }
 
   .btn {
@@ -84,8 +84,8 @@
     font-weight: 500;
     font-size: 1.25rem;
     translate: 0 -0.1rem;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   p {
@@ -93,45 +93,38 @@
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    /* or 156% */
-
-    letter-spacing: -0.035em;
-  }
-  .faq-container {
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-    overflow: hidden;
+    margin: 2rem;
     background: linear-gradient(
         0deg,
-        rgba(255, 255, 255, 0.97),
-        rgba(255, 255, 255, 0.97)
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
       ),
       #072125;
-    padding: 1rem;
-    margin: 1rem;
+    letter-spacing: -0.035em;
+    padding: 2.5rem;
     border-radius: 8px;
+  }
+  .faq-container {
+    margin: 1rem 2rem;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    overflow: hidden;
+    gap: 32px;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+      ),
+      #072125;
   }
 
   h2 {
+    font-family: "Aspekta";
+    font-style: normal;
     font-weight: 700;
     font-size: 1.313rem;
-    line-height: 28px;
-    font-family: "Aspekta";
-  }
-
-  .faq-answer {
-    padding: 1rem;
-    /* display: none; */
-    background-color: #fff;
-    /* transition:  0.3s ease-out; */
-    font-family: "Supreme";
-  }
-
-  .faq-answer.active {
-    font-family: "Supreme";
-    display: block;
-    max-height: 1000px; /* Adjust this value to your desired maximum height */
-    transition: 0.3s ease-in;
+    line-height: 1.75rem;
+    color: #072125;
   }
 
   @media screen and (max-width: 768px) {

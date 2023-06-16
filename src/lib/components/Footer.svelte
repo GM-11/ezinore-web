@@ -127,12 +127,15 @@
     margin-inline: 0.5rem;
   }
   .nav-element {
-    font-weight: 900;
-    margin-inline: 2rem;
     font-family: "Supreme";
-    transition: 0.2s;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.035em;
+    color: #072125;
+    margin-inline: 1rem;
   }
-
   .nav-element:hover {
     color: #f4b931;
     transition: 0.2s;
