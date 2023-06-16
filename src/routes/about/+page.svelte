@@ -124,6 +124,11 @@
   <ul class="slider">
     {#each team as member}
       <li
+        on:click={() => {
+          selected = member.id;
+          scrolltoView();
+        }}
+        on:keydown={() => {}}
         id={`id-${member.id}`}
         class=" element"
         style={`background-image: url('${
@@ -173,6 +178,7 @@
     transition: transform 0.3s ease;
     border-radius: 20px;
     transition: 0.3s;
+    cursor: pointer;
   }
   #button {
     display: flex;

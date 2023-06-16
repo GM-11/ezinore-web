@@ -114,6 +114,7 @@ system further savings."
     width: 50%;
     position: absolute;
     translate: 0 15rem;
+    text-align: center;
     color: #ddf6a2;
   }
 

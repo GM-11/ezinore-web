@@ -55,6 +55,11 @@
       {#each list as item}
         {#if num === 1}
           <li
+            on:click={() => {
+              selected = list.indexOf(item);
+              scrolltoView();
+            }}
+            on:keydown={() => {}}
             id={`id1-${list.indexOf(item)}`}
             style={`${
               selected === list.indexOf(item)
@@ -67,6 +72,11 @@
         {/if}
         {#if num === 2}
           <li
+            on:click={() => {
+              selected = list.indexOf(item);
+              scrolltoView();
+            }}
+            on:keydown={() => {}}
             id={`id2-${list.indexOf(item)}`}
             style={`${
               selected === list.indexOf(item)
@@ -123,6 +133,7 @@
     line-height: 28px;
     margin: 3rem 0;
     letter-spacing: -0.035em;
+    cursor: pointer;
   }
 
   h1 {
@@ -136,7 +147,6 @@
     margin: 5rem auto;
     text-align: center;
   }
-
 
   @media (max-width: 768px) {
     .main {
@@ -161,5 +171,4 @@
       text-align: center;
     }
   }
-
 </style>

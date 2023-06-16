@@ -135,4 +135,10 @@
     background-color: #fcd988;
     transition: 0.2s;
   }
+
+  @media screen and (max-width: 768px) {
+    .contact {
+      margin: 1rem 0;
+    }
+  }
 </style>
