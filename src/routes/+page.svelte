@@ -7,8 +7,6 @@
   import Testimonials from "$lib/components/Testimonials.svelte";
   import Sellingto from "$lib/components/Sellingto.svelte";
   import Faq from "$lib/components/faq.svelte";
-
-
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,13 +14,12 @@
 <LandingPage />
 <Description />
 <!-- <Form /> -->
-<Whyus/>
+<Whyus />
 <Services />
-<Sellingto/>
+<Sellingto />
 <!-- <Testimonials/> -->
-<Faq/>
+<Faq />
 
 <svelte:head>
   <title>Ezinore Pvt Ltd</title>
-  </svelte:head>
-
+</svelte:head>
