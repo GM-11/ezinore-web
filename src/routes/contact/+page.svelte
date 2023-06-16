@@ -11,6 +11,7 @@
       type="text"
       bind:value={message}
       placeholder="Message"
+      style="vertical-align: top; padding: 1rem 1rem 12rem 1rem;"
       class="h-full"
     />
     <button
@@ -88,6 +89,8 @@
     height: 50%;
   }
 
+  
+
   .main {
     background: linear-gradient(
         0deg,
@@ -120,10 +123,12 @@
 
   input {
     border-radius: 10px;
-    padding: 1rem;
+     padding: 1rem;
     margin-block: 1rem;
+    
   }
 
+  
   p {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
@@ -145,6 +150,15 @@
     font-size: 2rem;
     font-family: "Aspekta";
     color: #072125;
+  }
+
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+  @font-face {
+    font-family: "Aspekta";
+    src: url("/fonts/Aspekta-500.ttf");
   }
 
   @media screen and (max-width: 768px) {

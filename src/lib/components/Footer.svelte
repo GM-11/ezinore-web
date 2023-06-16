@@ -1,5 +1,4 @@
 <script lang="ts">
-  // import logo from "$lib/assets/ezinore-logo-coloured.png";
   import { page } from "$app/stores";
 
   import instagram from "$lib/assets/social/instagram.png";
@@ -8,19 +7,6 @@
   import linkedin from "$lib/assets/social/linkedin.png";
 
   import logo from "$lib/assets/ezinore-logo.svg";
-
-  let menuOpen = false;
-  let stuffAppear = false;
-
-  function scrollToElement({ target }: { target: any }) {
-    const el = document.querySelector(target.getAttribute("href"));
-    if (!el) return;
-    stuffAppear = false;
-    menuOpen = false;
-    el.scrollIntoView({
-      behavior: "smooth",
-    });
-  }
 </script>
 
 <nav class="md:flex flex-col hidden">
@@ -71,7 +57,7 @@
 <nav class="md:hidden flex flex-col absolute w-full">
   <div class="flex flex-row justify-between items-center">
     {#if $page.url.pathname !== "/"}
-      <a href="/" class="nav-element"><img src={logo} alt="" width="100"/> </a>
+      <a href="/" class="nav-element"><img src={logo} alt="" width="100" /> </a>
     {:else}
       <a href="#home">
         <img src={logo} width="150" alt="" class="nav-element cursor-pointer" />
@@ -144,12 +130,12 @@
     font-weight: 900;
     margin-inline: 2rem;
     font-family: "Supreme";
-    transition:  0.2s;
+    transition: 0.2s;
   }
 
   .nav-element:hover {
     color: #f4b931;
-    transition:  0.2s ;
+    transition: 0.2s;
   }
   nav {
     background: linear-gradient(
@@ -173,7 +159,6 @@
     display: flex;
     background-color: #f4b931;
     transition: 0.3s;
-
   }
 
   .contact:hover {

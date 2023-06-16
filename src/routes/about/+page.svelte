@@ -56,15 +56,6 @@
 </script>
 
 <div class=" hidden md:grid grid-cols-1">
-  <!-- <div id="leftbox">
-    <h1>Sustainable Energy Solutions for a Brighter Future</h1>
-    <h5>
-      A comprehensive solution to meet all your energy needs, including
-      generation, storage, and management.
-    </h5>
-
-    <a href="/about" id="button"> Learn More </a>
-  </div> -->
   <div
     class={`bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex flex-col-reverse items-center z-0`}
   />
@@ -72,13 +63,7 @@
 
 <div
   class="flex md:hidden bg-[url(lib/assets/header-img-1.png)] h-screen bg-cover bg-no-repeat bg-center flex-col-reverse items-center z-0"
->
-  <a href="/about" id="button"> Learn More </a>
-  <h6>
-    We at Ezinore provide solutions for the generation, storage, monitoring and
-    intelligent control of clean energy.
-  </h6>
-</div>
+/>
 
 <div class="py-10 md:px-14 px-4">
   <h2>Aim</h2>
@@ -145,11 +130,8 @@
   </ul>
 </div>
 
-<!-- <Testimonials /> -->
-
 <svelte:head>
   <title>About Us</title>
- 
 </svelte:head>
 
 <style>
@@ -199,7 +181,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2.5rem;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
   }
   h6 {
     font-style: normal;
@@ -207,7 +189,7 @@
     text-align: center;
     font-size: 1.5rem;
     color: white;
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
   h4 {
     font-style: normal;
@@ -215,7 +197,7 @@
     font-size: 1.1rem;
     line-height: 21px;
     color: #072125cc;
-    font-family: 'Supreme';
+    font-family: "Supreme";
   }
 
   h3 {

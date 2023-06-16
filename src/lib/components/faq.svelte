@@ -42,7 +42,7 @@
 {#each faqs as faq, index}
   <div class="faq-container">
     <div class="flex flex-row justify-between">
-      <h3>{faq.question}</h3>
+      <h2>{faq.question}</h2>
       <button class="btn" on:click={() => toggleFAQ(index)}
         >{index === activeIndex ? "-" : "+"}</button
       >
@@ -112,7 +112,7 @@
     border-radius: 8px;
   }
 
-  h3 {
+  h2 {
     font-weight: 700;
     font-size: 1.313rem;
     line-height: 28px;
@@ -145,7 +145,7 @@
       font-size: 1.25rem;
     }
 
-    h3 {
+    h2 {
       font-size: 1rem;
     }
 

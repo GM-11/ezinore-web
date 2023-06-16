@@ -52,7 +52,6 @@
   </div>
 </div>
 
-
 <style>
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -65,10 +64,9 @@
     padding-block: 2.5rem;
   }
 
-  /* For IE, Edge and Firefox */
   .scrollbar-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     display: flex;
     flex-wrap: nowrap;
@@ -84,7 +82,7 @@
     margin-top: 1rem;
     margin-left: 1rem;
     font-weight: bold;
-    font-family: 'Aspekta';
+    font-family: "Aspekta";
   }
 
   @media screen and (max-width: 768px) {
