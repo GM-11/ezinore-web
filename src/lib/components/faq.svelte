@@ -58,7 +58,7 @@
 {/each}
 
 <style>
-   @font-face {
+  @font-face {
     font-family: "Supreme";
     src: url("/fonts/Supreme-Variable.ttf");
   }
@@ -76,16 +76,16 @@
 
   .btn {
     background: #072125;
-    border-radius: 100%;
+    color: #fff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 1.25rem;
+    translate: 0 -0.1rem;
     width: 2rem;
     height: 2rem;
-    color: white;
-    ;
-    font-size: 1.5rem;
   }
 
   p {
@@ -138,7 +138,7 @@
     .faq-container {
       margin: 0.5rem;
       padding: 1rem;
-      width: 90%;
+      width: 95%;
     }
 
     h1 {
@@ -147,9 +147,10 @@
 
     h2 {
       font-size: 1rem;
+      width: 70%;
     }
 
-    p{
+    p {
       font-size: 0.875rem;
       line-height: 1.5rem;
     }

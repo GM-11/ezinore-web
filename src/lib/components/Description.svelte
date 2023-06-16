@@ -26,7 +26,6 @@
 </div>
 
 <style>
- 
   h1 {
     font-style: normal;
     font-weight: 650;
@@ -64,8 +63,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
-    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: black;
     border-radius: 100px;
     margin-block: 1.5rem;
@@ -79,7 +80,6 @@
     background-color: #fcd988;
     transition: 0.3s;
   }
-
   @media screen and (max-width: 786px) {
     #main {
       grid-template-columns: repeat(1, minmax(0, 1fr));

@@ -76,6 +76,7 @@
   <div class="flex md:flex-row flex-col m-0 mt-10 md:w-full md:justify-between">
     <div class="ans">
       <img src={k1} alt="" />
+      <br />
       <p>
         Sustainable electricity with minimal environmental impact, powered by
         renewable energy sources.
@@ -83,6 +84,7 @@
     </div>
     <div class="ans">
       <img src={k2} alt="" />
+      <br />
       <p>
         A future where every building is a net-zero energy building, enabled by
         renewable energy and smart grid technologies optimized by AI.
@@ -90,6 +92,7 @@
     </div>
     <div class="ans">
       <img src={k3} alt="" />
+      <br />
       <p>
         An efficient and resilient electricity grid, powered by sustainable
         energy and fine-tuned to minimize waste and emissions.
@@ -183,14 +186,6 @@
     font-size: 2.5rem;
     font-family: "Aspekta";
   }
-  h6 {
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    font-size: 1.5rem;
-    color: white;
-    font-family: "Supreme";
-  }
   h4 {
     font-style: normal;
     font-weight: 700;
@@ -209,15 +204,50 @@
     font-family: "Supreme";
   }
 
+  p {
+    text-align: flex-start;
+    color: #072125cc;
+    font-family: "Supreme";
+  }
+
+  .slider {
+    scrollbar-width: 0em;
+    scrollbar-color: transparent transparent;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .slider::-webkit-scrollbar {
+    width: 0em;
+  }
+
+  .slider::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  .ans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20em;
+    padding-bottom: 2rem;
+  }
+
+  .aim-para {
+    margin-right: 20rem;
+    margin-top: 1rem;
+    color: #072125;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   @media screen and (max-width: 768px) {
-    /* h1 {
-      font-size: 1.5rem;
-    } */
-
-    p {
-      text-align: flex-start;
-    }
-
     h3 {
       font-size: 1rem;
       line-height: 1em;
@@ -257,47 +287,5 @@
       width: 30%;
       margin: 1rem;
     }
-  }
-
-  p {
-    text-align: flex-start;
-    color: #072125cc;
-  }
-
-  .slider {
-    scrollbar-width: 0em;
-    scrollbar-color: transparent transparent;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .slider::-webkit-scrollbar {
-    width: 0em;
-  }
-
-  .slider::-webkit-scrollbar-thumb {
-    background-color: transparent;
-  }
-
-  .ans {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20em;
-    padding-bottom: 2rem;
-  }
-
-  .aim-para {
-    margin-right: 20rem;
-    margin-top: 2rem;
-    color: #072125;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 </style>
