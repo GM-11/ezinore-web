@@ -118,7 +118,7 @@
     </div>
   </div>
 
-<br>
+  <br />
   <ul class="slider">
     {#each team as member}
       <li
@@ -127,9 +127,8 @@
         style={`background-image: url('${member.img}'); background-size: cover; background-position: center;`}
       >
         <div class=" w-full p-3 bg-white">
-          
           <h3>{member.name}</h3>
-          <br>
+          <br />
           <h4>{member.position}</h4>
         </div>
       </li>
@@ -142,6 +141,15 @@
 </svelte:head>
 
 <style>
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+  @font-face {
+    font-family: "Aspekta";
+    src: url("/fonts/Aspekta-500.ttf");
+  }
+
   .team-section {
     background: linear-gradient(
         0deg,

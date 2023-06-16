@@ -78,6 +78,14 @@
 </svelte:head>
 
 <style>
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+  @font-face {
+    font-family: "Aspekta";
+    src: url("/fonts/Aspekta-500.ttf");
+  }
   #rightbox {
     background-image: url("$lib/assets/join-us.png");
     background-clip: content-box;
@@ -88,8 +96,6 @@
     width: 100%;
     height: 50%;
   }
-
-  
 
   .main {
     background: linear-gradient(
@@ -123,12 +129,10 @@
 
   input {
     border-radius: 10px;
-     padding: 1rem;
+    padding: 1rem;
     margin-block: 1rem;
-    
   }
 
-  
   p {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;

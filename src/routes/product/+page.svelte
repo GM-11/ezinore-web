@@ -71,6 +71,14 @@
 </svelte:head>
 
 <style>
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.ttf");
+  }
+  @font-face {
+    font-family: "Aspekta";
+    src: url("/fonts/Aspekta-500.ttf");
+  }
   .main {
     background-color: #0e0d0b;
   }
