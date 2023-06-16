@@ -1,7 +1,6 @@
 <script>
   import Navbar from "$lib/components/Navbar.svelte";
   import "../app.css";
-  import { page } from "$app/stores";
   import Footer from "$lib/components/Footer.svelte";
   // const path = $page;
 
@@ -16,8 +15,3 @@
   <Footer />
 </div>
 
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-  @import "../fonts.css";
-
-</style>

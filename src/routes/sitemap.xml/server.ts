@@ -16,6 +16,24 @@ export async function GET() {
             <changefreq>monthly</changefreq>
             <priority>1.0</priority>
         </url>
+        <url>
+            <loc>https://www.ezinore.com/about</loc>
+            <lastmod>2023-06-15</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
+            <loc>https://www.ezinore.com/product</loc>
+            <lastmod>2023-06-15</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
+            <loc>https://www.ezinore.com/contact</loc>
+            <lastmod>2023-06-15</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
         </urlset>`.trim(),
     {
       headers: {

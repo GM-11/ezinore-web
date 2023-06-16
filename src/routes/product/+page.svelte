@@ -28,16 +28,10 @@
 </script>
 
 <div>
-  <div class=" flex flex-col items-center justify-center main">
+  <div class=" flex flex-col items-center  justify-center  main">
     <h1 class="text-center">Coming Soon</h1>
     <div class="md:hidden flex">
-      <img
-        class="main-img"
-        src={sparko}
-        width="170"
-        alt=""
-        style="margin-top: 5rem;"
-      />
+      <img class="main-img" src={sparko} width="170" alt="" style="margin-top: 5rem;" />
     </div>
     <div class="md:flex hidden">
       <img class="main-img" src={sparko} width="250" alt="" />
@@ -48,7 +42,7 @@
     </h3>
   </div>
   <div class="bg-white">
-    <video bind:this={video} autoplay muted loop>
+    <video bind:this={video} autoplay muted loop >
       <track kind="captions" />
       <source src={sparkoVideo} type="video/mp4" />
     </video>
@@ -89,13 +83,11 @@
   <!-- <Form /> -->
 </div>
 
+
 <svelte:head>
   <title>Our Products</title>
-  <meta
-    name="description"
-    content="An AI powered smart energy control system with integrated inverter system
-  and in build liquid cooled energy storage system."
-  />
+  <meta name="description" content="An AI powered smart energy control system with integrated inverter system
+  and in build liquid cooled energy storage system.">
 </svelte:head>
 
 <style>
@@ -127,7 +119,7 @@
     text-decoration-color: #0c373df1;
   }
 
-  p {
+  p{
     color: #0c373df1;
   }
 
@@ -157,7 +149,7 @@
     color: #ddf6a2;
     position: absolute;
     width: 60%;
-    translate: 0 15rem;
+    translate: 0 15rem ;
     /* background-co0 lor: black; */
   }
 
