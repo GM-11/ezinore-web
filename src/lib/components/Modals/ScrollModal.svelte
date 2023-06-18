@@ -41,19 +41,21 @@
   }
 </script>
 
-<h1>{heading}</h1>
+{#if num === 1}
+  <h1 id="head-1">
+    {heading}
+  </h1>
 
-<div class="main">
-  <div class="flex md:hidden justify-center items-center">
-    <img width="150" src={imagePath} alt="" />
-  </div>
-  <div class="md:flex hidden justify-center items-center">
-    <img width="250" src={imagePath} alt="" />
-  </div>
-  <div>
-    <ul>
-      {#each list as item}
-        {#if num === 1}
+  <div class="main" style="padding:2rem;">
+    <div class="flex md:hidden justify-center items-center">
+      <img width="150" src={imagePath} alt="" />
+    </div>
+    <div class="md:flex hidden justify-center items-center">
+      <img width="250" src={imagePath} alt="" />
+    </div>
+    <div>
+      <ul>
+        {#each list as item}
           <li
             on:click={() => {
               selected = list.indexOf(item);
@@ -69,36 +71,64 @@
           >
             {item}
           </li>
-        {/if}
-        {#if num === 2}
-          <li
-            on:click={() => {
-              selected = list.indexOf(item);
-              scrolltoView();
-            }}
-            on:keydown={() => {}}
-            id={`id2-${list.indexOf(item)}`}
-            style={`${
-              selected === list.indexOf(item)
-                ? "color:rgba(7,33,37,0.75);"
-                : "color:rgba(7,33,37,0.2);"
-            } transition:0.5s;`}
-          >
-            {item}
-          </li>
-        {/if}
-      {/each}
-    </ul>
-    <div class="md:flex hidden">
-      <button class="text-2xl" on:click={handlePrev}>
-        <img width="75" class="handleScroll" alt="" src={leftArrow} />
-      </button>
-      <button class="text-2xl" on:click={handleNext}>
-        <img width="75" class="handleScroll" alt="" src={rightArrow} />
-      </button>
+        {/each}
+      </ul>
+      <div class="md:flex hidden">
+        <button class="text-2xl" on:click={handlePrev}>
+          <img width="75" class="handleScroll" alt="" src={leftArrow} />
+        </button>
+        <button class="text-2xl" on:click={handleNext}>
+          <img width="75" class="handleScroll" alt="" src={rightArrow} />
+        </button>
+      </div>
     </div>
   </div>
-</div>
+{:else if num === 2}
+  <div
+    style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), #072125; padding:2rem;"
+  >
+    <h1 id="head-2">
+      {heading}
+    </h1>
+    <div class="main">
+      <div>
+        <ul>
+          {#each list as item}
+            <li
+              on:click={() => {
+                selected = list.indexOf(item);
+                scrolltoView();
+              }}
+              on:keydown={() => {}}
+              id={`id2-${list.indexOf(item)}`}
+              style={`${
+                selected === list.indexOf(item)
+                  ? "color:rgba(7,33,37,0.75);"
+                  : "color:rgba(7,33,37,0.2);"
+              } transition:0.5s;`}
+            >
+              {item}
+            </li>
+          {/each}
+        </ul>
+        <div class="md:flex hidden">
+          <button class="text-2xl" on:click={handlePrev}>
+            <img width="75" class="handleScroll" alt="" src={leftArrow} />
+          </button>
+          <button class="text-2xl" on:click={handleNext}>
+            <img width="75" class="handleScroll" alt="" src={rightArrow} />
+          </button>
+        </div>
+      </div>
+      <div class="flex md:hidden justify-center items-center">
+        <img width="150" src={imagePath} alt="" />
+      </div>
+      <div class="md:flex hidden justify-center items-center">
+        <img width="250" src={imagePath} alt="" />
+      </div>
+    </div>
+  </div>
+{/if}
 
 <style>
   @font-face {
@@ -115,9 +145,33 @@
     height: 100%;
   }
 
+  #head-2 {
+    font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 650;
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+    color: #072125;
+    width: 60%;
+    margin: 2rem auto;
+  }
+
+  #head-1 {
+    font-family: "Aspekta";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
+    color: rgba(7, 33, 37, 0.75);
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
+  }
+
   ul {
     height: 50vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 2rem;
   }
 
@@ -136,18 +190,6 @@
     cursor: pointer;
   }
 
-  h1 {
-    font-family: "Aspekta";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.313rem;
-    line-height: 1.75rem;
-    color: rgba(7, 33, 37, 0.75);
-    width: 80%;
-    margin: 5rem auto;
-    text-align: center;
-  }
-
   @media (max-width: 768px) {
     .main {
       display: flex;
@@ -164,11 +206,17 @@
 
     h1 {
       font-size: 1rem;
-      line-height: 1.3rem;
+      line-height: 1.5rem;
       color: rgba(7, 33, 37, 0.75);
       width: 80%;
       margin: 5rem auto;
       text-align: center;
+    }
+
+    #head-2, #head-1{
+      width: 70%;
+      font-size: 1rem;
+      margin: 1rem auto;
     }
   }
 </style>
