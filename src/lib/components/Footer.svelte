@@ -96,7 +96,7 @@
     </a>
   </div>
   <hr />
-  <h3>@ Ezinore 2022. All Right Reserved</h3>
+  <h3>@ Ezinore 2023. All Right Reserved</h3>
 </nav>
 
 <style>
