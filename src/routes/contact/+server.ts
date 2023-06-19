@@ -23,8 +23,8 @@ export async function POST(requestEvent: RequestEvent) {
 
   const mailDetails = {
     from: body.email,
-    // to: "connect@ezinore.com",
-    to: "mathuyrgopal@gmail.com",
+    to: "connect@ezinore.com",
+    // to: "mathuyrgopal@gmail.com",
     subject: body.email + " has sent a new message",
     text: body.message,
   };
