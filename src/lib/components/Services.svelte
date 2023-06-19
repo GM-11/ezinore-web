@@ -77,12 +77,6 @@
   }
 
   h1 {
-    /* color: white;
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    font-weight: bold;
-    font-family: "Aspekta"; */
     font-family: "Aspekta";
     font-style: normal;
     font-weight: 650;
