@@ -5,9 +5,10 @@
 </script>
 
 <div class="main">
+  <img src={imgPath} alt="" style="width:60%" class="flex md:hidden" />
   <div class="content">
     <h1>{title}</h1>
-    <br>
+    <br class="md:flex hidden">
     <p>{content}</p>
   </div>
   <img src={imgPath} alt="" style="width:60%" class="md:flex hidden" />
@@ -61,10 +62,14 @@
   @media screen and (max-width: 786px) {
     h1 {
       font-size: 1.5em;
+      line-height: 2rem;
+      text-align: start;
     }
 
     p {
       width: 100%;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
     }
 
     .main {
@@ -73,17 +78,22 @@
       justify-content: center;
       align-items: center;
       margin-right: 1rem;
+      flex-direction: column;
+      padding: 1rem;
+      height: 30rem;
     }
 
-    img {
-      translate: 3em -10em;
+    img{
+      translate: 0 0rem ;
+      scale: 2;
     }
-
+   
     .content {
-      text-align: center;
+      text-align: start;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       display: flex;
+      flex-direction: column;
       width: 100%;
     }
   }
