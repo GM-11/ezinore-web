@@ -62,7 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
+    padding: 1rem 2rem;
     color: #072125;
     border-radius: 100px;
     margin-block: 1.5rem;
@@ -71,8 +71,8 @@
     font-family: "Supreme";
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
     letter-spacing: -0.035em;
   }
 

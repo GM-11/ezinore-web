@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
+  import {goto} from '$app/navigation'
   let message = "";
   let email = "";
+ 
 </script>
+
 
 <div class="h-full px-20 py-10 grid grid-cols-1 md:grid-cols-2 main gap-10">
   <div class="span-cols-1 w-[100%] flex flex-col mt-10">
@@ -27,13 +30,9 @@
         });
 
         if (res.status == 200) {
-          alert(
-            "Email has been sent sucessfully. Our team will respond shortly."
-          );
-          email = "";
-          message = "";
+          goto("/thankyou?title=ts&subtitle=24")
         } else {
-          alert("Some error occured");
+          goto("/thankyou?title=err&subtitle=goback")
         }
       }}
     >

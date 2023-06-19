@@ -5,6 +5,14 @@ import nodemailer from "nodemailer";
 export async function POST(requestEvent: RequestEvent) {
   const body = await requestEvent.request.json();
 
+  if (!body.email || !body.message) {
+    return json({}, { status: 400 });
+  }
+
+  if (body.email === "" || body.message === "") {
+    return json({}, { status: 400 });
+  }
+
   const mailTransporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -15,11 +23,11 @@ export async function POST(requestEvent: RequestEvent) {
 
   const mailDetails = {
     from: body.email,
-    to: "connect@ezinore.com",
+    // to: "connect@ezinore.com",
+    to: "mathuyrgopal@gmail.com",
     subject: body.email + " has sent a new message",
     text: body.message,
   };
-
 
   mailTransporter.sendMail(mailDetails, function (err: unknown) {
     if (err) {
@@ -31,7 +39,6 @@ export async function POST(requestEvent: RequestEvent) {
 
   return json({ message: "completed email function" });
 }
-
 
 // import type { RequestEvent } from "@sveltejs/kit";
 // import { json } from "@sveltejs/kit";
