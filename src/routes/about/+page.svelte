@@ -311,9 +311,9 @@
     .ans {
       display: flex;
       width: 100%;
-      align-items: flex-start;
-      justify-content: flex-start;
-      text-align: flex-start;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       padding-bottom: 2rem;
       margin: 0;
     }
