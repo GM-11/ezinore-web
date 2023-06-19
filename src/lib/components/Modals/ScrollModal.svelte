@@ -48,13 +48,13 @@
 
   <div class="main" style="padding:2rem;">
     <div class="flex md:hidden justify-center items-center">
-      <img width="150" src={imagePath} alt="" />
+      <img class="img" width="150" src={imagePath} alt="" />
     </div>
     <div class="md:flex hidden justify-center items-center">
-      <img width="250" src={imagePath} alt="" />
+      <img class="img" width="250" src={imagePath} alt="" />
     </div>
     <div>
-      <ul>
+      <ul class="md:flex flex-col hidden">
         {#each list as item}
           <li
             on:click={() => {
@@ -73,11 +73,23 @@
           </li>
         {/each}
       </ul>
+
+      <li class="list-none min-h-[25vh]">
+        {list[selected]}
+      </li>
+      <div class="flex md:hidden">
+        <button on:click={handlePrev}>
+          <img width="50" class="handleScroll" alt="" src={leftArrow} />
+        </button>
+        <button on:click={handleNext}>
+          <img width="50" class="handleScroll" alt="" src={rightArrow} />
+        </button>
+      </div>
       <div class="md:flex hidden">
-        <button class="text-2xl" on:click={handlePrev}>
+        <button on:click={handlePrev}>
           <img width="75" class="handleScroll" alt="" src={leftArrow} />
         </button>
-        <button class="text-2xl" on:click={handleNext}>
+        <button on:click={handleNext}>
           <img width="75" class="handleScroll" alt="" src={rightArrow} />
         </button>
       </div>
@@ -92,7 +104,7 @@
     </h1>
     <div class="main">
       <div>
-        <ul>
+        <ul class="md:flex md:flex-col hidden">
           {#each list as item}
             <li
               on:click={() => {
@@ -111,20 +123,34 @@
             </li>
           {/each}
         </ul>
+
+        <div class="flex md:hidden justify-center items-center">
+          <img class="img" width="150" src={imagePath} alt="" />
+        </div>
+
+        <li class="list-none min-h-[25vh]">
+          {list[selected]}
+        </li>
+        <div class="flex md:hidden">
+          <button on:click={handlePrev}>
+            <img width="50" class="handleScroll" alt="" src={leftArrow} />
+          </button>
+          <button on:click={handleNext}>
+            <img width="50" class="handleScroll" alt="" src={rightArrow} />
+          </button>
+        </div>
         <div class="md:flex hidden">
-          <button class="text-2xl" on:click={handlePrev}>
+          <button on:click={handlePrev}>
             <img width="75" class="handleScroll" alt="" src={leftArrow} />
           </button>
-          <button class="text-2xl" on:click={handleNext}>
+          <button on:click={handleNext}>
             <img width="75" class="handleScroll" alt="" src={rightArrow} />
           </button>
         </div>
       </div>
-      <div class="flex md:hidden justify-center items-center">
-        <img width="150" src={imagePath} alt="" />
-      </div>
+
       <div class="md:flex hidden justify-center items-center">
-        <img width="250" src={imagePath} alt="" />
+        <img class="img" width="250" src={imagePath} alt="" />
       </div>
     </div>
   </div>
@@ -183,8 +209,8 @@
     font-family: "Supreme";
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
     margin: 3rem 0;
     letter-spacing: -0.035em;
     cursor: pointer;
@@ -198,10 +224,19 @@
       align-items: center;
     }
 
-    ul {
-      height: 50vh;
-      overflow-y: scroll;
-      padding: 2rem;
+    .img {
+      margin-block: 3rem;
+    }
+
+    li {
+      font-family: "Supreme";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      letter-spacing: -0.035em;
+      width: 100%;
+      margin: 1rem;
     }
 
     h1 {
@@ -213,10 +248,18 @@
       text-align: center;
     }
 
-    #head-2, #head-1{
-      width: 70%;
-      font-size: 1rem;
-      margin: 1rem auto;
+    #head-2 {
+      width: 95%;
+      font-size: 1.313rem;
+      line-height: 1.75rem;
+      text-align: center;
+    }
+    #head-1 {
+      width: 95%;
+      margin: auto;
+      text-align: start;
+      font-size: 1.313rem;
+      line-height: 1.8rem;
     }
   }
 </style>
