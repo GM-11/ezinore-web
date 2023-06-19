@@ -56,7 +56,7 @@
       id: 2,
     },
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 3 },
-    { img: anshu, name: "Anshu", position: "3D Designer", id: 4 },
+    { img: anshu, name: "Anshukanchan Mohanta", position: "3D Designer", id: 4 },
     { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
     // { img: sujal, name: "Sujal", position: "Emdedded Engineer", id: 6},
   ];
