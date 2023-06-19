@@ -6,7 +6,7 @@
         "We are providiging user with the ability to manage and utilize their energy effectively providing them with comprehnsive solutions which empowers our customers to overcome grid dependency and reduce their electricity bills.",
     },
     {
-      question: "What should we choose ezinore?",
+      question: "Why should we choose ezinore?",
       answer:
         "You should choose ezinore as we provide realtime monitoring and controls on your mobile,with easy integration and installation of renewable energy solutions. We have a scalable and modular design. With the help of AI based energy optimization, our system helps user to reduce their electricity bills to more than 40% ",
     },
