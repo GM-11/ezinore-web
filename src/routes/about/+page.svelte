@@ -41,7 +41,8 @@
       element.scrollIntoView({
         behavior: "smooth",
         inline: "start",
-        block: "end",
+        block: "nearest",
+      
       });
   }
 
