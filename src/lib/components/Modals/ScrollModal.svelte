@@ -74,7 +74,7 @@
         {/each}
       </ul>
 
-      <li class="list-none min-h-[25vh]">
+      <li class="list-none min-h-[25vh] md:hidden flex">
         {list[selected]}
       </li>
       <div class="flex md:hidden">
@@ -128,7 +128,7 @@
           <img class="img" width="150" src={imagePath} alt="" />
         </div>
 
-        <li class="list-none min-h-[25vh]">
+        <li class="list-none min-h-[25vh] md:hidden flex">
           {list[selected]}
         </li>
         <div class="flex md:hidden">
