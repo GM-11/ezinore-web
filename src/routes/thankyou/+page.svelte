@@ -81,4 +81,12 @@
     background-color: #fcd988;
     transition: 0.3s;
   }
+
+  @media (max-width: 768px) {
+    #main {
+      padding: 1rem;
+      margin: 1rem;
+      text-align: center;
+    }
+  }
 </style>
