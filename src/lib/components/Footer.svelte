@@ -134,7 +134,7 @@
     line-height: 1.125rem;
     letter-spacing: -0.035em;
     color: #072125;
-    margin-inline: 1rem;
+    margin-inline: 1.5rem;
   }
   .nav-element:hover {
     color: #f4b931;
@@ -150,18 +150,18 @@
   }
 
   .contact {
-    margin-inline: 2rem;
-    border-radius: 30px;
+    border-radius: 100px;
+    font-family: "Supreme";
     color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0 2rem 0 1rem;
+    align-items: center;
+    padding: 0.7rem 1.4rem;
+    gap: 10px;
     text-align: center;
     justify-content: center;
     display: flex;
     background-color: #f4b931;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .contact:hover {
