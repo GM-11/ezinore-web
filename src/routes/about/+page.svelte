@@ -153,6 +153,13 @@
   <meta
     name="description"
     content="We at Ezinore believe in sustainable future aimed towards customer satisfatction through are products and services."/>
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "Organization",
+      "name" : "Ezinore",
+      "url" : "https://ezinore.com/about",
+    }</script>
 </svelte:head>
 
 <style>

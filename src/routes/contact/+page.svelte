@@ -77,6 +77,13 @@
   <meta
     name="ezinore"
     content="Contact Ezinore to start your sustainable journey today"/>
+    <script type="application/ld+json">
+      {
+        "@context" : "https://schema.org",
+        "@type" : "Organization",
+        "name" : "Ezinore",
+        "url" : "https://ezinore.com/contact",
+      }</script>
 </svelte:head>
 
 <style>

@@ -71,6 +71,13 @@ system further savings."
 <svelte:head>
   <title>Our Products</title>
   <meta name="Ezinore Products" content="We at ezinore provide various product for your varying energy demands"/>
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "Organization",
+      "name" : "Ezinore",
+      "url" : "https://ezinore.com/product",
+    }</script>
 </svelte:head>
 
 <style>

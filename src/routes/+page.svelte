@@ -11,15 +11,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-
 <svelte:head>
   <title>Ezinore</title>
   <meta
-  name="ezinore"
-  content="We at ezinore comprehensive solution to meet all your energy needs, including
+    name="ezinore"
+    content="We at ezinore comprehensive solution to meet all your energy needs, including
 generation, storage, and management."
-/>
+  />
+  <script type="application/ld+json">
+  {
+    "@context" : "https://schema.org",
+    "@type" : "Organization",
+    "name" : "Ezinore",
+    "url" : "https://ezinore.com/",
+  }
+  </script>
 </svelte:head>
 
 <LandingPage />
