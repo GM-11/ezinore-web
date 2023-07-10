@@ -11,6 +11,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+
+<svelte:head>
+  <title>Ezinore</title>
+  <meta
+  name="ezinore"
+  content="We at ezinore comprehensive solution to meet all your energy needs, including
+generation, storage, and management."
+/>
+</svelte:head>
+
 <LandingPage />
 <Description />
 <!-- <Form /> -->
@@ -19,10 +30,6 @@
 <Sellingto />
 <!-- <Testimonials/> -->
 <Faq />
-
-<svelte:head>
-  <title>Ezinore Pvt Ltd</title>
-</svelte:head>
 
 <style>
   @font-face {

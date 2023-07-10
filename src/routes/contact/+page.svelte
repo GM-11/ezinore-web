@@ -74,6 +74,9 @@
 
 <svelte:head>
   <title>Contact Us</title>
+  <meta
+    name="ezinore"
+    content="Contact Ezinore to start your sustainable journey today"/>
 </svelte:head>
 
 <style>

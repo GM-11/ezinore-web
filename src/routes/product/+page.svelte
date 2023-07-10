@@ -70,6 +70,7 @@ system further savings."
 
 <svelte:head>
   <title>Our Products</title>
+  <meta name="Ezinore Products" content="We at ezinore provide various product for your varying energy demands"/>
 </svelte:head>
 
 <style>

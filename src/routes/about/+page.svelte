@@ -150,6 +150,9 @@
 
 <svelte:head>
   <title>About Us</title>
+  <meta
+    name="description"
+    content="We at Ezinore believe in sustainable future aimed towards customer satisfatction through are products and services."/>
 </svelte:head>
 
 <style>
