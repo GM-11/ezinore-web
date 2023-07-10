@@ -11,7 +11,7 @@
 
 <nav class="md:flex flex-col hidden">
   <div
-    class=" z-20 text-black items-center flex flex-row justify-between w-full p-5"
+    class=" text-black items-center flex flex-row justify-between w-full p-5"
   >
     {#if $page.url.pathname !== "/"}
       <a href="/" class="nav-element"><img src={logo} width="150" alt="" /> </a>
