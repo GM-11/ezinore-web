@@ -45,6 +45,10 @@
   </div>
 </div>
 
+<svelte:head>
+  <title>Ezinore</title>
+</svelte:head>
+
 <style>
   #button {
     display: flex;

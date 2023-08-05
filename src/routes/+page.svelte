@@ -28,7 +28,7 @@ generation, storage, and management."
   </script>
 </svelte:head>
 
-<LandingPage />
+<LandingPage /> 
 <Description />
 <!-- <Form /> -->
 <Whyus />
