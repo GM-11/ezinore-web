@@ -30,11 +30,9 @@ generation, storage, and management."
 
 <LandingPage /> 
 <Description />
-<!-- <Form /> -->
 <Whyus />
 <Services />
 <Sellingto />
-<!-- <Testimonials/> -->
 <Faq />
 
 <style>
